@@ -5,16 +5,134 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="c5fd8838-444b-4543-a7c3-cef03adad847" name="Default" comment="">
-      <change beforePath="" afterPath="$PROJECT_DIR$/static_root/website/css/style.css" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/static_root/website/gamefiles/background.png" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/static_root/website/images/background.gif" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/static_root/website/images/background.png" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/static_root/website/js/background.png" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/static_root/website/js/main.js" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/static_root/website/js/phaser.map" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/static_root/website/js/phaser.min.js" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change beforePath="$PROJECT_DIR$/BA/settings.py" afterPath="$PROJECT_DIR$/BA/settings.py" />
+      <change beforePath="$PROJECT_DIR$/static_root/admin/css/autocomplete.css" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/static_root/admin/css/base.css" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/static_root/admin/css/changelists.css" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/static_root/admin/css/dashboard.css" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/static_root/admin/css/fonts.css" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/static_root/admin/css/forms.css" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/static_root/admin/css/login.css" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/static_root/admin/css/responsive.css" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/static_root/admin/css/responsive_rtl.css" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/static_root/admin/css/rtl.css" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/static_root/admin/css/vendor/select2/LICENSE-SELECT2.md" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/static_root/admin/css/vendor/select2/select2.css" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/static_root/admin/css/vendor/select2/select2.min.css" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/static_root/admin/css/widgets.css" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/static_root/admin/fonts/LICENSE.txt" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/static_root/admin/fonts/README.txt" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/static_root/admin/fonts/Roboto-Bold-webfont.woff" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/static_root/admin/fonts/Roboto-Light-webfont.woff" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/static_root/admin/fonts/Roboto-Regular-webfont.woff" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/static_root/admin/img/LICENSE" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/static_root/admin/img/README.txt" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/static_root/admin/img/calendar-icons.svg" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/static_root/admin/img/gis/move_vertex_off.svg" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/static_root/admin/img/gis/move_vertex_on.svg" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/static_root/admin/img/icon-addlink.svg" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/static_root/admin/img/icon-alert.svg" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/static_root/admin/img/icon-calendar.svg" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/static_root/admin/img/icon-changelink.svg" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/static_root/admin/img/icon-clock.svg" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/static_root/admin/img/icon-deletelink.svg" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/static_root/admin/img/icon-no.svg" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/static_root/admin/img/icon-unknown-alt.svg" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/static_root/admin/img/icon-unknown.svg" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/static_root/admin/img/icon-yes.svg" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/static_root/admin/img/inline-delete.svg" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/static_root/admin/img/search.svg" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/static_root/admin/img/selector-icons.svg" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/static_root/admin/img/sorting-icons.svg" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/static_root/admin/img/tooltag-add.svg" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/static_root/admin/img/tooltag-arrowright.svg" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/static_root/admin/js/SelectBox.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/static_root/admin/js/SelectFilter2.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/static_root/admin/js/actions.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/static_root/admin/js/actions.min.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/static_root/admin/js/admin/DateTimeShortcuts.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/static_root/admin/js/admin/RelatedObjectLookups.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/static_root/admin/js/autocomplete.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/static_root/admin/js/calendar.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/static_root/admin/js/cancel.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/static_root/admin/js/change_form.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/static_root/admin/js/collapse.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/static_root/admin/js/collapse.min.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/static_root/admin/js/core.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/static_root/admin/js/inlines.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/static_root/admin/js/inlines.min.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/static_root/admin/js/jquery.init.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/static_root/admin/js/popup_response.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/static_root/admin/js/prepopulate.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/static_root/admin/js/prepopulate.min.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/static_root/admin/js/prepopulate_init.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/static_root/admin/js/timeparse.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/static_root/admin/js/urlify.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/static_root/admin/js/vendor/jquery/LICENSE-JQUERY.txt" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/static_root/admin/js/vendor/jquery/jquery.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/static_root/admin/js/vendor/jquery/jquery.min.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/static_root/admin/js/vendor/select2/LICENSE-SELECT2.md" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/static_root/admin/js/vendor/select2/i18n/ar.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/static_root/admin/js/vendor/select2/i18n/az.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/static_root/admin/js/vendor/select2/i18n/bg.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/static_root/admin/js/vendor/select2/i18n/ca.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/static_root/admin/js/vendor/select2/i18n/cs.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/static_root/admin/js/vendor/select2/i18n/da.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/static_root/admin/js/vendor/select2/i18n/de.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/static_root/admin/js/vendor/select2/i18n/el.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/static_root/admin/js/vendor/select2/i18n/en.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/static_root/admin/js/vendor/select2/i18n/es.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/static_root/admin/js/vendor/select2/i18n/et.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/static_root/admin/js/vendor/select2/i18n/eu.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/static_root/admin/js/vendor/select2/i18n/fa.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/static_root/admin/js/vendor/select2/i18n/fi.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/static_root/admin/js/vendor/select2/i18n/fr.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/static_root/admin/js/vendor/select2/i18n/gl.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/static_root/admin/js/vendor/select2/i18n/he.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/static_root/admin/js/vendor/select2/i18n/hi.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/static_root/admin/js/vendor/select2/i18n/hr.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/static_root/admin/js/vendor/select2/i18n/hu.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/static_root/admin/js/vendor/select2/i18n/id.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/static_root/admin/js/vendor/select2/i18n/is.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/static_root/admin/js/vendor/select2/i18n/it.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/static_root/admin/js/vendor/select2/i18n/ja.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/static_root/admin/js/vendor/select2/i18n/km.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/static_root/admin/js/vendor/select2/i18n/ko.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/static_root/admin/js/vendor/select2/i18n/lt.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/static_root/admin/js/vendor/select2/i18n/lv.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/static_root/admin/js/vendor/select2/i18n/mk.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/static_root/admin/js/vendor/select2/i18n/ms.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/static_root/admin/js/vendor/select2/i18n/nb.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/static_root/admin/js/vendor/select2/i18n/nl.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/static_root/admin/js/vendor/select2/i18n/pl.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/static_root/admin/js/vendor/select2/i18n/pt-BR.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/static_root/admin/js/vendor/select2/i18n/pt.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/static_root/admin/js/vendor/select2/i18n/ro.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/static_root/admin/js/vendor/select2/i18n/ru.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/static_root/admin/js/vendor/select2/i18n/sk.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/static_root/admin/js/vendor/select2/i18n/sr-Cyrl.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/static_root/admin/js/vendor/select2/i18n/sr.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/static_root/admin/js/vendor/select2/i18n/sv.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/static_root/admin/js/vendor/select2/i18n/th.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/static_root/admin/js/vendor/select2/i18n/tr.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/static_root/admin/js/vendor/select2/i18n/uk.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/static_root/admin/js/vendor/select2/i18n/vi.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/static_root/admin/js/vendor/select2/i18n/zh-CN.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/static_root/admin/js/vendor/select2/i18n/zh-TW.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/static_root/admin/js/vendor/select2/select2.full.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/static_root/admin/js/vendor/select2/select2.full.min.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/static_root/admin/js/vendor/xregexp/LICENSE-XREGEXP.txt" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/static_root/admin/js/vendor/xregexp/xregexp.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/static_root/admin/js/vendor/xregexp/xregexp.min.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/static_root/website/css/style.css" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/static_root/website/gamefiles/background.png" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/static_root/website/images/background.gif" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/static_root/website/images/background.png" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/static_root/website/js/background.png" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/static_root/website/js/main.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/static_root/website/js/phaser.map" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/static_root/website/js/phaser.min.js" afterPath="" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -62,8 +180,8 @@
       <file leaf-file-name="settings.py" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/BA/settings.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="17">
-              <caret line="25" column="13" lean-forward="false" selection-start-line="25" selection-start-column="13" selection-end-line="25" selection-end-column="13" />
+            <state relative-caret-position="374">
+              <caret line="127" column="20" lean-forward="true" selection-start-line="127" selection-start-column="20" selection-end-line="127" selection-end-column="20" />
               <folding />
             </state>
           </provider>
@@ -267,12 +385,13 @@
             <path>
               <item name="BA" type="b2602c69:ProjectViewProjectNode" />
               <item name="BA" type="462c0819:PsiDirectoryNode" />
-              <item name="static_root" type="462c0819:PsiDirectoryNode" />
+              <item name="website" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="BA" type="b2602c69:ProjectViewProjectNode" />
               <item name="BA" type="462c0819:PsiDirectoryNode" />
               <item name="website" type="462c0819:PsiDirectoryNode" />
+              <item name="static" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -413,7 +532,14 @@
       <option name="project" value="LOCAL" />
       <updated>1514837823643</updated>
     </task>
-    <option name="localTasksCounter" value="9" />
+    <task id="LOCAL-00009" summary="nav bar fix">
+      <created>1514838033272</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1514838033272</updated>
+    </task>
+    <option name="localTasksCounter" value="10" />
     <servers />
   </component>
   <component name="TestHistory">
@@ -881,8 +1007,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/BA/settings.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="17">
-          <caret line="25" column="13" lean-forward="false" selection-start-line="25" selection-start-column="13" selection-end-line="25" selection-end-column="13" />
+        <state relative-caret-position="374">
+          <caret line="127" column="20" lean-forward="true" selection-start-line="127" selection-start-column="20" selection-end-line="127" selection-end-column="20" />
           <folding />
         </state>
       </provider>
