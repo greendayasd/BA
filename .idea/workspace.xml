@@ -5,14 +5,141 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="c5fd8838-444b-4543-a7c3-cef03adad847" name="Default" comment="">
-      <change beforePath="" afterPath="$PROJECT_DIR$/Progs/start/images/background.png" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/website/static/website/js/background.png" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/static_root/admin/css/autocomplete.css" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/static_root/admin/css/base.css" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/static_root/admin/css/changelists.css" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/static_root/admin/css/dashboard.css" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/static_root/admin/css/fonts.css" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/static_root/admin/css/forms.css" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/static_root/admin/css/login.css" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/static_root/admin/css/responsive.css" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/static_root/admin/css/responsive_rtl.css" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/static_root/admin/css/rtl.css" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/static_root/admin/css/vendor/select2/LICENSE-SELECT2.md" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/static_root/admin/css/vendor/select2/select2.css" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/static_root/admin/css/vendor/select2/select2.min.css" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/static_root/admin/css/widgets.css" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/static_root/admin/fonts/LICENSE.txt" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/static_root/admin/fonts/README.txt" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/static_root/admin/fonts/Roboto-Bold-webfont.woff" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/static_root/admin/fonts/Roboto-Light-webfont.woff" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/static_root/admin/fonts/Roboto-Regular-webfont.woff" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/static_root/admin/img/LICENSE" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/static_root/admin/img/README.txt" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/static_root/admin/img/calendar-icons.svg" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/static_root/admin/img/gis/move_vertex_off.svg" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/static_root/admin/img/gis/move_vertex_on.svg" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/static_root/admin/img/icon-addlink.svg" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/static_root/admin/img/icon-alert.svg" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/static_root/admin/img/icon-calendar.svg" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/static_root/admin/img/icon-changelink.svg" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/static_root/admin/img/icon-clock.svg" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/static_root/admin/img/icon-deletelink.svg" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/static_root/admin/img/icon-no.svg" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/static_root/admin/img/icon-unknown-alt.svg" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/static_root/admin/img/icon-unknown.svg" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/static_root/admin/img/icon-yes.svg" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/static_root/admin/img/inline-delete.svg" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/static_root/admin/img/search.svg" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/static_root/admin/img/selector-icons.svg" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/static_root/admin/img/sorting-icons.svg" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/static_root/admin/img/tooltag-add.svg" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/static_root/admin/img/tooltag-arrowright.svg" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/static_root/admin/js/SelectBox.js" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/static_root/admin/js/SelectFilter2.js" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/static_root/admin/js/actions.js" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/static_root/admin/js/actions.min.js" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/static_root/admin/js/admin/DateTimeShortcuts.js" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/static_root/admin/js/admin/RelatedObjectLookups.js" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/static_root/admin/js/autocomplete.js" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/static_root/admin/js/calendar.js" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/static_root/admin/js/cancel.js" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/static_root/admin/js/change_form.js" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/static_root/admin/js/collapse.js" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/static_root/admin/js/collapse.min.js" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/static_root/admin/js/core.js" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/static_root/admin/js/inlines.js" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/static_root/admin/js/inlines.min.js" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/static_root/admin/js/jquery.init.js" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/static_root/admin/js/popup_response.js" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/static_root/admin/js/prepopulate.js" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/static_root/admin/js/prepopulate.min.js" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/static_root/admin/js/prepopulate_init.js" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/static_root/admin/js/timeparse.js" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/static_root/admin/js/urlify.js" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/static_root/admin/js/vendor/jquery/LICENSE-JQUERY.txt" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/static_root/admin/js/vendor/jquery/jquery.js" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/static_root/admin/js/vendor/jquery/jquery.min.js" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/static_root/admin/js/vendor/select2/LICENSE-SELECT2.md" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/static_root/admin/js/vendor/select2/i18n/ar.js" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/static_root/admin/js/vendor/select2/i18n/az.js" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/static_root/admin/js/vendor/select2/i18n/bg.js" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/static_root/admin/js/vendor/select2/i18n/ca.js" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/static_root/admin/js/vendor/select2/i18n/cs.js" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/static_root/admin/js/vendor/select2/i18n/da.js" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/static_root/admin/js/vendor/select2/i18n/de.js" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/static_root/admin/js/vendor/select2/i18n/el.js" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/static_root/admin/js/vendor/select2/i18n/en.js" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/static_root/admin/js/vendor/select2/i18n/es.js" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/static_root/admin/js/vendor/select2/i18n/et.js" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/static_root/admin/js/vendor/select2/i18n/eu.js" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/static_root/admin/js/vendor/select2/i18n/fa.js" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/static_root/admin/js/vendor/select2/i18n/fi.js" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/static_root/admin/js/vendor/select2/i18n/fr.js" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/static_root/admin/js/vendor/select2/i18n/gl.js" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/static_root/admin/js/vendor/select2/i18n/he.js" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/static_root/admin/js/vendor/select2/i18n/hi.js" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/static_root/admin/js/vendor/select2/i18n/hr.js" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/static_root/admin/js/vendor/select2/i18n/hu.js" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/static_root/admin/js/vendor/select2/i18n/id.js" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/static_root/admin/js/vendor/select2/i18n/is.js" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/static_root/admin/js/vendor/select2/i18n/it.js" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/static_root/admin/js/vendor/select2/i18n/ja.js" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/static_root/admin/js/vendor/select2/i18n/km.js" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/static_root/admin/js/vendor/select2/i18n/ko.js" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/static_root/admin/js/vendor/select2/i18n/lt.js" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/static_root/admin/js/vendor/select2/i18n/lv.js" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/static_root/admin/js/vendor/select2/i18n/mk.js" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/static_root/admin/js/vendor/select2/i18n/ms.js" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/static_root/admin/js/vendor/select2/i18n/nb.js" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/static_root/admin/js/vendor/select2/i18n/nl.js" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/static_root/admin/js/vendor/select2/i18n/pl.js" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/static_root/admin/js/vendor/select2/i18n/pt-BR.js" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/static_root/admin/js/vendor/select2/i18n/pt.js" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/static_root/admin/js/vendor/select2/i18n/ro.js" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/static_root/admin/js/vendor/select2/select2.full.js" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/static_root/admin/js/vendor/select2/select2.full.min.js" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change beforePath="$PROJECT_DIR$/BA/settings.py" afterPath="$PROJECT_DIR$/BA/settings.py" />
-      <change beforePath="$PROJECT_DIR$/website/static/website/js/main.js" afterPath="$PROJECT_DIR$/website/static/website/js/main.js" />
-      <change beforePath="$PROJECT_DIR$/website/templates/website/base.html" afterPath="$PROJECT_DIR$/website/templates/website/base.html" />
-      <change beforePath="$PROJECT_DIR$/website/templates/website/game.html" afterPath="$PROJECT_DIR$/website/templates/website/game.html" />
-      <change beforePath="$PROJECT_DIR$/website/templates/website/phasergame.html" afterPath="$PROJECT_DIR$/website/templates/website/phasergame.html" />
+      <change beforePath="$PROJECT_DIR$/Progs/start.zip" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/Progs/start/audio/bgm.mp3" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/Progs/start/audio/bgm.ogg" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/Progs/start/audio/coin.wav" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/Progs/start/audio/door.wav" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/Progs/start/audio/jump.wav" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/Progs/start/audio/key.wav" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/Progs/start/audio/stomp.wav" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/Progs/start/data/level00.json" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/Progs/start/data/level01.json" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/Progs/start/images/background.png" afterPath="$PROJECT_DIR$/website/background.png" />
+      <change beforePath="$PROJECT_DIR$/Progs/start/images/coin_animated.png" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/Progs/start/images/coin_icon.png" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/Progs/start/images/decor.png" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/Progs/start/images/door.png" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/Progs/start/images/grass_1x1.png" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/Progs/start/images/grass_2x1.png" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/Progs/start/images/grass_4x1.png" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/Progs/start/images/grass_6x1.png" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/Progs/start/images/grass_8x1.png" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/Progs/start/images/ground.png" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/Progs/start/images/hero.png" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/Progs/start/images/hero_stopped.png" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/Progs/start/images/invisible_wall.png" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/Progs/start/images/key.png" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/Progs/start/images/key_icon.png" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/Progs/start/images/numbers.png" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/Progs/start/images/spider.png" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/Progs/start/index.html" afterPath="" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -60,8 +187,8 @@
       <file leaf-file-name="settings.py" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/BA/settings.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="714">
-              <caret line="42" column="14" lean-forward="true" selection-start-line="42" selection-start-column="14" selection-end-line="42" selection-end-column="14" />
+            <state relative-caret-position="323">
+              <caret line="34" column="26" lean-forward="true" selection-start-line="34" selection-start-column="26" selection-end-line="34" selection-end-column="26" />
               <folding />
             </state>
           </provider>
@@ -111,16 +238,6 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="phasergame.html" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/website/templates/website/phasergame.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="153">
-              <caret line="9" column="16" lean-forward="false" selection-start-line="9" selection-start-column="16" selection-end-line="9" selection-end-column="16" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file leaf-file-name="main.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/website/static/website/js/main.js">
           <provider selected="true" editor-type-id="text-editor">
@@ -131,14 +248,12 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="game.html" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/website/templates/website/game.html">
+      <file leaf-file-name="phasergame.html" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/website/templates/website/phasergame.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="238">
-              <caret line="190" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="190" selection-end-column="0" />
-              <folding>
-                <element signature="e#252#4256#0#HTML" expanded="false" />
-              </folding>
+            <state relative-caret-position="68">
+              <caret line="4" column="67" lean-forward="false" selection-start-line="4" selection-start-column="67" selection-end-line="4" selection-end-column="67" />
+              <folding />
             </state>
           </provider>
         </entry>
@@ -277,64 +392,11 @@
             <path>
               <item name="BA" type="b2602c69:ProjectViewProjectNode" />
               <item name="BA" type="462c0819:PsiDirectoryNode" />
-              <item name="website" type="462c0819:PsiDirectoryNode" />
+              <item name="static_root" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="BA" type="b2602c69:ProjectViewProjectNode" />
               <item name="BA" type="462c0819:PsiDirectoryNode" />
-              <item name="website" type="462c0819:PsiDirectoryNode" />
-              <item name="static" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="BA" type="b2602c69:ProjectViewProjectNode" />
-              <item name="BA" type="462c0819:PsiDirectoryNode" />
-              <item name="website" type="462c0819:PsiDirectoryNode" />
-              <item name="static" type="462c0819:PsiDirectoryNode" />
-              <item name="website" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="BA" type="b2602c69:ProjectViewProjectNode" />
-              <item name="BA" type="462c0819:PsiDirectoryNode" />
-              <item name="website" type="462c0819:PsiDirectoryNode" />
-              <item name="static" type="462c0819:PsiDirectoryNode" />
-              <item name="website" type="462c0819:PsiDirectoryNode" />
-              <item name="css" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="BA" type="b2602c69:ProjectViewProjectNode" />
-              <item name="BA" type="462c0819:PsiDirectoryNode" />
-              <item name="website" type="462c0819:PsiDirectoryNode" />
-              <item name="static" type="462c0819:PsiDirectoryNode" />
-              <item name="website" type="462c0819:PsiDirectoryNode" />
-              <item name="gamefiles" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="BA" type="b2602c69:ProjectViewProjectNode" />
-              <item name="BA" type="462c0819:PsiDirectoryNode" />
-              <item name="website" type="462c0819:PsiDirectoryNode" />
-              <item name="static" type="462c0819:PsiDirectoryNode" />
-              <item name="website" type="462c0819:PsiDirectoryNode" />
-              <item name="images" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="BA" type="b2602c69:ProjectViewProjectNode" />
-              <item name="BA" type="462c0819:PsiDirectoryNode" />
-              <item name="website" type="462c0819:PsiDirectoryNode" />
-              <item name="static" type="462c0819:PsiDirectoryNode" />
-              <item name="website" type="462c0819:PsiDirectoryNode" />
-              <item name="js" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="BA" type="b2602c69:ProjectViewProjectNode" />
-              <item name="BA" type="462c0819:PsiDirectoryNode" />
-              <item name="website" type="462c0819:PsiDirectoryNode" />
-              <item name="templates" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="BA" type="b2602c69:ProjectViewProjectNode" />
-              <item name="BA" type="462c0819:PsiDirectoryNode" />
-              <item name="website" type="462c0819:PsiDirectoryNode" />
-              <item name="templates" type="462c0819:PsiDirectoryNode" />
               <item name="website" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
@@ -462,7 +524,14 @@
       <option name="project" value="LOCAL" />
       <updated>1514834040852</updated>
     </task>
-    <option name="localTasksCounter" value="7" />
+    <task id="LOCAL-00007" summary="nav bar fix">
+      <created>1514836372404</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1514836372404</updated>
+    </task>
+    <option name="localTasksCounter" value="8" />
     <servers />
   </component>
   <component name="TestHistory">
@@ -508,7 +577,7 @@
       <window_info id="Docker" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="false" weight="0.33" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.34010416" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32767764" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="manage.py@BA" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.16174975" sideWeight="0.5" order="12" side_tool="false" content_ui="tabs" />
+      <window_info id="manage.py@BA" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.27670395" sideWeight="0.5" order="12" side_tool="false" content_ui="tabs" />
       <window_info id="SciView" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
@@ -840,14 +909,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/website/templatetags/base_extras.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="119">
-          <caret line="7" column="20" lean-forward="false" selection-start-line="7" selection-start-column="20" selection-end-line="7" selection-end-column="20" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/website/templates/website/index.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="119">
@@ -886,24 +947,6 @@
         <state />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/website/templates/website/history.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="68">
-          <caret line="4" column="38" lean-forward="false" selection-start-line="4" selection-start-column="38" selection-end-line="4" selection-end-column="38" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/website/templates/website/game.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="238">
-          <caret line="190" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="190" selection-end-column="0" />
-          <folding>
-            <element signature="e#252#4256#0#HTML" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/website/templates/website/ideas.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="493">
@@ -911,6 +954,38 @@
           <folding>
             <element signature="e#829#852#0#HTML" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/website/templates/website/game.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="119">
+          <caret line="7" column="16" lean-forward="true" selection-start-line="7" selection-start-column="16" selection-end-line="7" selection-end-column="16" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/website/templates/website/phasergame.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="68">
+          <caret line="4" column="67" lean-forward="false" selection-start-line="4" selection-start-column="67" selection-end-line="4" selection-end-column="67" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/website/templatetags/base_extras.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="119">
+          <caret line="7" column="20" lean-forward="false" selection-start-line="7" selection-start-column="20" selection-end-line="7" selection-end-column="20" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/website/templates/website/history.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="68">
+          <caret line="4" column="38" lean-forward="false" selection-start-line="4" selection-start-column="38" selection-end-line="4" selection-end-column="38" />
+          <folding />
         </state>
       </provider>
     </entry>
@@ -922,18 +997,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/website/templates/website/phasergame.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="153">
-          <caret line="9" column="16" lean-forward="false" selection-start-line="9" selection-start-column="16" selection-end-line="9" selection-end-column="16" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/BA/settings.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="714">
-          <caret line="42" column="14" lean-forward="true" selection-start-line="42" selection-start-column="14" selection-end-line="42" selection-end-column="14" />
+        <state relative-caret-position="323">
+          <caret line="34" column="26" lean-forward="true" selection-start-line="34" selection-start-column="26" selection-end-line="34" selection-end-column="26" />
           <folding />
         </state>
       </provider>
