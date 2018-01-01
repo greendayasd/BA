@@ -28,15 +28,23 @@ class HistoryView(generic.ListView):
     template_name = 'website/history.html'
 
     def get_queryset(self):
-        return Version.objects.all().order_by('pk')
+        return Version.objects.all().order_by('-pub_date')
 
 
 class IdeasView(generic.ListView):
     template_name = 'website/ideas.html'
-    context_object_name = 'latest_idea_list'
+    model = Idea
+    context_object_name = 'idea_list'
 
     def get_queryset(self):
         return Idea.objects.order_by('-pub_date')
+
+
+class CreateIdeaView(generic.View):
+    template_name = 'website/createIdea.html'
+
+    def get(self, request, *args, **kwargs):
+        return render(request, 'website/createIdea.html')
 
 
 class GameView(generic.View):

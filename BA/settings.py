@@ -25,7 +25,7 @@ SECRET_KEY = '#36svg&za&o3@9$zp9mp#h3z2&)u!x&$q0ahq-35c&@*5s0-et'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['localhost', '127.0.0.1']
+ALLOWED_HOSTS = ['localhost', '127.0.0.1', 'crowdjump.win']
 
 
 # Application definition
@@ -122,7 +122,7 @@ USE_TZ = True
 
 EMAIL_HOST = 'smtp.gmail.com'
 EMAIL_PORT = 587
-EMAIL_HOST_USER = 'crowdjumop@gmail.com'
+EMAIL_HOST_USER = 'crowdjump@gmail.com'
 EMAIL_HOST_PASSWORD = 'SwagTest123'
 EMAIL_USE_TLS = True
 

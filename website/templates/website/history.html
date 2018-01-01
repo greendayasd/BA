@@ -1,33 +1,40 @@
 
-{% include "website/base.html" %}
+{% extends "website/base.html" %}
 {% load static %}
 
-<html>
-<head>
-<style>
-#versions {
-    font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
-    border-collapse: collapse;
-    width: 100%;
-}
+{% block title %}History{% endblock %}
 
-#versions td, #versions th {
-    border: 1px solid #ddd;
-    padding: 8px;
-}
+{% block head %}
+    <style>
+        #versions {
+            font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
+            border-collapse: collapse;
+            width: 40%;
+        }
 
-#versions tr:nth-child(even){
-    background-color: #121212;
-    color:white}
+        #versions td, #versions th {
+            border: 1px solid #ddd;
+            padding: 8px;
+        }
 
-#versions th {
-    padding-top: 12px;
-    padding-bottom: 12px;
-    text-align: left;
-    background-color: #413FC0;
-    color: white;
-}
-</style>
+        #versions tr:nth-child(even){
+            background-color: #121212;
+            color:white}
+
+        #versions th {
+            padding-top: 12px;
+            padding-bottom: 12px;
+            text-align: left;
+            background-color: #413FC0;
+            color: white;
+        }
+
+        table{
+        margin: 20px;
+        }
+    </style>
+
+{% endblock %}
 {% block body %}
 
 <link rel="stylesheet" type="text/css" href="{% static 'website/css/style.css' %}" />
@@ -44,7 +51,7 @@
         <tr>
             <td>{{ version.label }}</td>
             <td>{{ version.change }}</td>
-            <td>{{ version. }}</td>
+            <td>{{ version.submitter.user.username}}</td>
         </tr>
     {% endfor %}
     </table>

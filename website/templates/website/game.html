@@ -1,9 +1,6 @@
-<html>
-<head>
-    <title>Bootstrap Example</title>
-</head>
-<body>
-{% include "website/base.html" %}
+
+
+{% extends "website/base.html" %}
 {% load static %}
 
 <link rel="stylesheet" type="text/css" href="{% static 'website/css/style.css' %}" />
@@ -187,7 +184,3 @@ window.addEventListener("load",function(){
 
 
 </script>
-
-
-</body>
-</html>
