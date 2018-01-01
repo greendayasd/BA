@@ -7,6 +7,7 @@
     <title>{% block title %}Crowdjump{% endblock %} </title>
 
     {% load static %}
+    {% load base_extras %}
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
     <link href="https://fonts.googleapis.com/css?family=Gloria+Hallelujah" rel="stylesheet">
     <link rel="stylesheet" type="text/css" href="{% static 'website/css/style.css' %}" />
@@ -35,17 +36,16 @@
         <!-- Items -->
         <div class="collapse navbar-collapse" id="topNavBar">
             <ul class ="nav navbar-nav">
-                <li class="active">
-                    <a href="{% url 'website:phasergame'%}">
-                        <span class="" aria-hidden="true"></span>&nbsp; Game </a>
+                <li class="{% active_page request "game" %}">
+                    <a href="{% url "website:phasergame" %}">
+                        <span class="" aria-hidden="true"></span>&nbsp;Game</a>
                 </li>
-                <li class="">
-                    <a href="{% url 'website:ideas'%}">
-                        <span class="" aria-hidden="true"></span>&nbsp; Ideas </a>
-                </li>
-                <li class="">
-                    <a href="{% url 'website:history'%}">
-                        <span class="" aria-hidden="true"></span>&nbsp; History </a>
+                <li class="{% active_page request "history" %}">
+                    <a href="{% url "website:history" %}">
+                        <span class="" aria-hidden="true"></span>&nbsp;History</a>
+                </li><li class="{% active_page request "ideas" %}">
+                    <a href="{% url "website:ideas" %}">
+                        <span class="" aria-hidden="true"></span>&nbsp;Ideas</a>
                 </li>
             </ul>
 
@@ -57,7 +57,7 @@
                 </li>
                 <li class="">
                     <a href="{% url 'website:game'%}">
-                        <span class="" aria-hidden="true"></span>&nbsp; Login </a>
+                        <span class="" aria-hidden="true"></span>&nbsp; Logout </a>
                 </li>
             </ul>
         </div>
