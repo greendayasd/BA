@@ -37,10 +37,8 @@ class Player(models.Model):
     requests_left = models.IntegerField(default=1)
     rounds_played = models.IntegerField(default=0)
     current_version_beaten = models.BooleanField(default=False)
+    votes_left = models.IntegerField(default=1)
 
-    #
-    # votes_left = models.IntegerField(default=1)
-    #
 
     @receiver(post_save, sender=User)
     def create_player(sender, instance, created, **kwargs):
@@ -70,12 +68,14 @@ class Player(models.Model):
     def player_decrease_requests(self):
         self.requests_left -= 1
 
+    def __str__(self):
+        return self.user.username
 
 class Version(models.Model):
     label = models.CharField(max_length=20,unique=True)
     change = models.CharField(max_length=200)
     pub_date = models.DateTimeField('date published')
-    submitter = models.OneToOneField(Player, on_delete=models.CASCADE, null=True)
+    submitter = models.ForeignKey(Player, on_delete=models.CASCADE, null=True)
 
     def __str__(self):
         return self.label
