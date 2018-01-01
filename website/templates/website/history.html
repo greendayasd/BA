@@ -1,0 +1,54 @@
+
+{% include "website/base.html" %}
+{% load static %}
+
+<html>
+<head>
+<style>
+#versions {
+    font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
+    border-collapse: collapse;
+    width: 100%;
+}
+
+#versions td, #versions th {
+    border: 1px solid #ddd;
+    padding: 8px;
+}
+
+#versions tr:nth-child(even){
+    background-color: #121212;
+    color:white}
+
+#versions th {
+    padding-top: 12px;
+    padding-bottom: 12px;
+    text-align: left;
+    background-color: #413FC0;
+    color: white;
+}
+</style>
+{% block body %}
+
+<link rel="stylesheet" type="text/css" href="{% static 'website/css/style.css' %}" />
+
+<h1> Previous Versions and Patchnotes</h1>
+{% if version_list %}
+     <table id="versions">
+          <tr>
+            <th>Version</th>
+            <th>Change</th>
+            <th>User</th>
+          </tr>
+    {% for version in version_list %}
+        <tr>
+            <td>{{ version.label }}</td>
+            <td>{{ version.change }}</td>
+            <td>{{ version. }}</td>
+        </tr>
+    {% endfor %}
+    </table>
+{% else %}
+    <p>No history available.</p>
+{% endif %}
+{% endblock %}

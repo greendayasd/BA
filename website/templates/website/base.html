@@ -1,0 +1,62 @@
+
+{% load static %}
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <!-- <link href="https://fonts.googleapis.com/css?family=Gloria+Hallelujah" rel="stylesheet"> -->
+    <link href="https://fonts.googleapis.com/css?family=Satisfy" rel="stylesheet" type='text/css'>
+    <link rel="stylesheet" type="text/css" href="{% static 'website/css/style.css' %}" />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+</head>
+
+
+<nav class="navbar navbar-inverse">
+    <div class="container-fluid">
+
+        <!-- Header -->
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle" date-toggle="collapse" data-target="#topNavBar">
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-Brand" href="{% url 'website:index'%}">Home</a>
+        </div>
+
+        <!-- Items -->
+        <div class="collapse navbar-collapse" id="topNavBar">
+            <ul class ="nav navbar-nav">
+                <li class="active">
+                    <a href="{% url 'website:phasergame'%}">
+                        <span class="" aria-hidden="true"></span>&nbsp; Game </a>
+                </li>
+                <li class="">
+                    <a href="{% url 'website:ideas'%}">
+                        <span class="" aria-hidden="true"></span>&nbsp; Ideas </a>
+                </li>
+                <li class="">
+                    <a href="{% url 'website:history'%}">
+                        <span class="" aria-hidden="true"></span>&nbsp; History </a>
+                </li>
+            </ul>
+
+
+            <ul class ="nav navbar-nav navbar-right">
+                <li class="">
+                    <a href="{% url 'website:phasergame'%}">
+                        <span class="" aria-hidden="true"></span>&nbsp;Deutsch </a>
+                </li>
+                <li class="">
+                    <a href="{% url 'website:game'%}">
+                        <span class="" aria-hidden="true"></span>&nbsp; Login </a>
+                </li>
+            </ul>
+        </div>
+
+    </div>
+</nav>
+
+{% block body %}
+{% endblock %}

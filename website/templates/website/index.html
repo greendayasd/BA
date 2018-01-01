@@ -1,0 +1,15 @@
+
+{% extends "website/base.html" %}
+
+
+{% load static %}
+
+<link rel="stylesheet" type="text/css" href="{% static 'website/css/style.css' %}" />
+{% block body %}
+<h1> Welcome to CrowdJump!</h1>
+<p> The goal is simple: Control the ball the left and right arrow keys and up/space to jump and try to reach the flag!</p>
+<p> While the game may seem pretty simple, after you beat the level you can submit a feature request.</p>
+<p>At the moment, every version a random idea will be chosen, but you can not only submit ideas for game features but also for general things
+like a new voting system or a method to communicate!</p>
+
+{% endblock %}
