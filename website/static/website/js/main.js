@@ -8,7 +8,7 @@ PlayState.preload = function () {
     this.game.load.json('level:1', level + 'level01.json');
     this.game.load.image('background', files + 'background.png');
 
-    this.game.load.image('ground', 'images/ground.png');
+    this.game.load.image('ground', files + 'ground.png');
     this.game.load.image('grass:8x1', files + 'grass_8x1.png');
     this.game.load.image('grass:6x1', files + 'grass_6x1.png');
     this.game.load.image('grass:4x1', files + 'grass_4x1.png');
