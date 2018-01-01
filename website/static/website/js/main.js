@@ -3,7 +3,7 @@ PlayState = {};
 
 // load game assets here
 PlayState.preload = function () {
-    this.game.load.image('background', 'gamefiles/background.png');
+    this.game.load.image('background', 'images/background.png');
 };
 
 // create game entities and set up world here

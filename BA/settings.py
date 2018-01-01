@@ -132,3 +132,4 @@ EMAIL_USE_TLS = True
 
 STATIC_URL = '/static/'
 MEDIA_URL = '/media/'
+STATIC_ROOT = os.path.join(BASE_DIR, 'static')

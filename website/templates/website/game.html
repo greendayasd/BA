@@ -5,8 +5,11 @@
 
 <link rel="stylesheet" type="text/css" href="{% static 'website/css/style.css' %}" />
 
-<canvas id="canvas" style="border:1px solid #000"></canvas>
+{% block head %}
+{% endblock %}
 
+{% block body %}
+<canvas id="canvas" style="border:1px solid #000"></canvas>
 <script>
 (function() {
     var requestAnimationFrame = window.requestAnimationFrame || window.mozRequestAnimationFrame || window.webkitRequestAnimationFrame || window.msRequestAnimationFrame;
@@ -184,3 +187,5 @@ window.addEventListener("load",function(){
 
 
 </script>
+
+{% endblock %}
