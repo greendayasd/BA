@@ -22,13 +22,13 @@ class QuestionAdmin(admin.ModelAdmin):
 
 class IdeaAdmin(admin.ModelAdmin):
     fieldsets = [
-        (None, {'fields': ['player']}),
+        (None, {'fields': ['user']}),
         (None, {'fields': ['request_text']}),
         (None, {'fields': ['description']}),
         (None, {'fields': ['version']}),
         ('Date information', {'fields': ['pub_date']}),
     ]
-    list_display = ('player', 'request_text', 'pub_date', 'version', 'is_newest_version')
+    list_display = ('user', 'request_text', 'pub_date', 'version', 'is_newest_version')
     list_filter = ['pub_date', 'version']
     search_fields = ['request_text', 'version']
 

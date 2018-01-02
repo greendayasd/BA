@@ -43,7 +43,8 @@
                 <li class="{% active_page request "history" %}">
                     <a href="{% url "website:history" %}">
                         <span class="" aria-hidden="true"></span>&nbsp;History</a>
-                </li><li class="{% active_page request "ideas" %}">
+                </li>
+                <li class="{% active_page request "ideas" %}">
                     <a href="{% url "website:ideas" %}">
                         <span class="" aria-hidden="true"></span>&nbsp;Ideas</a>
                 </li>
@@ -55,10 +56,22 @@
                     <a href="{% url 'website:phasergame'%}">
                         <span class="" aria-hidden="true"></span>&nbsp;Deutsch </a>
                 </li>
-                <li class="">
-                    <a href="{% url 'login'%}">
-                        <span class="" aria-hidden="true"></span>&nbsp; Login </a>
-                </li>
+                {% if user.is_authenticated %}
+                    <li class="">
+                        <a style="color: red" href="{% url 'index'%}">
+                        <span class="" aria-hidden="true"></span>&nbsp; {{ user.get_username }} </a>
+                    </li>
+                    <li class="">
+                        <a href="{% url 'logout'%}?next={{request.path}}">
+                        <span class="glyphicon glyphicon-log-out" aria-hidden="true"></span>&nbsp; Logout </a>
+                    </li>
+                {% else %}
+                    <li class="">
+                        <a href="{% url 'login'%}?next={{request.path}}">
+                        <span class="glyphicon glyphicon-log-in" aria-hidden="true"></span>&nbsp; Login </a>
+
+                    </li>
+                {% endif %}
             </ul>
         </div>
 

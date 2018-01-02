@@ -1,4 +1,4 @@
-import datetime
+from datetime import datetime
 from django.db import models
 from django.utils import timezone
 from django.contrib.auth.models import User
@@ -71,10 +71,11 @@ class Player(models.Model):
     def __str__(self):
         return self.user.username
 
+
 class Version(models.Model):
     label = models.CharField(max_length=20,unique=True)
     change = models.CharField(max_length=200)
-    pub_date = models.DateTimeField('date published')
+    pub_date = models.DateTimeField('date published', default=datetime.now)
     submitter = models.ForeignKey(Player, on_delete=models.CASCADE, null=True)
 
     def __str__(self):
@@ -87,11 +88,11 @@ class Version(models.Model):
 
 
 class Idea(models.Model):
-    player = models.ForeignKey(User, on_delete=models.CASCADE)
+    user = models.ForeignKey(User, on_delete=models.CASCADE)
     request_text = models.CharField(max_length=40)
     description = models.CharField(max_length=500)
-    pub_date = models.DateTimeField('date published')
-    version = models.ForeignKey(Version, on_delete=models.CASCADE)
+    pub_date = models.DateTimeField('date published', default=datetime.now)
+    version = models.ForeignKey(Version, on_delete=models.CASCADE, null=True)
     #
     # votes = models.IntegerField(default=0)
     #

@@ -1,0 +1,21 @@
+
+{% extends "website/../base.html" %}
+{% load static %}
+
+{% block title %}Submit Idea{% endblock %}
+<link rel="stylesheet" type="text/css" href="{% static 'website/css/style.css' %}" />
+
+{% block body %}
+<form method="post" novalidate>
+  {% csrf_token %}
+  <table border="1">
+      {{ form }}
+     <!-- <input type="hidden" name="user" value="{{ user}}"> -->
+  </table>
+  <button type="submit">Submit</button>
+</form>
+   <!-- 'You already submitted a request! Do you want to delete it?' -->
+
+
+{% endblock %}
+
