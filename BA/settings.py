@@ -56,7 +56,7 @@ ROOT_URLCONF = 'BA.urls'
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': [os.path.join(BASE_DIR, 'templates')]
+        'DIRS': ['./templates', os.path.join(BASE_DIR, 'templates')]
         ,
         'APP_DIRS': True,
         'OPTIONS': {
@@ -126,7 +126,7 @@ EMAIL_HOST_USER = 'crowdjump@gmail.com'
 EMAIL_HOST_PASSWORD = 'SwagTest123'
 EMAIL_USE_TLS = True
 
-
+LOGIN_REDIRECT_URL = '/'
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/2.0/howto/static-files/
 
