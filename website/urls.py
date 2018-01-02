@@ -12,7 +12,4 @@ urlpatterns = [
     path('createIdea', views.CreateIdeaView.as_view(), name='createIdea'),
     path('game', views.GameView.as_view(), name='game'),
     path('phasergame', views.PhaserGameView.as_view(), name='phasergame'),
-    url(r'^signup/$', views.signup, name='signup'),
-    url(r'^activate/(?P<uidb64>[0-9A-Za-z_\-]+)/(?P<token>[0-9A-Za-z]{1,13}-[0-9A-Za-z]{1,20})/$',
-        views.activate, name='activate'),
 ]
