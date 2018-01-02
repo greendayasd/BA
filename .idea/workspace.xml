@@ -1,58 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="c5fd8838-444b-4543-a7c3-cef03adad847" name="Default" comment="jump and run">
-      <change beforePath="" afterPath="$PROJECT_DIR$/templates/registration/logged_out.html" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/templates/registration/login.html" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/templates/registration/password_reset_done.html" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/templates/registration/password_reset_form.html" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/website/static/website/audio/bgm.mp3" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/website/static/website/audio/bgm.ogg" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/website/static/website/audio/coin.wav" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/website/static/website/audio/door.wav" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/website/static/website/audio/flag.wav" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/website/static/website/audio/jump.mp3" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/website/static/website/audio/jump.wav" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/website/static/website/audio/key.wav" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/website/static/website/audio/stomp.wav" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/website/static/website/gamefiles/coin_animated.png" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/website/static/website/gamefiles/coin_icon.png" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/website/static/website/gamefiles/decor.png" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/website/static/website/gamefiles/door.png" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/website/static/website/gamefiles/flag.png" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/website/static/website/gamefiles/invisible_wall.png" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/website/static/website/gamefiles/key.png" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/website/static/website/gamefiles/key_icon.png" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/website/static/website/gamefiles/loading.png" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/website/static/website/gamefiles/numbers.png" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/website/static/website/gamefiles/spider.png" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/website/static/website/js/game.js" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/website/static/website/js/gamemenu.js" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/website/static/website/js/gameover.js" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/website/static/website/js/splash.js" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/website/static/website/js/webfontloader.js" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/website/static/website/level/level00.json" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/website/static/website/libs/mixins.js.html" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/website/static/website/libs/polyfill.js.html" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/website/static/website/libs/style.js.html" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/website/static/website/libs/utils.js.html" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/website/templates/website/password_reset_confirm.html" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/website/templates/website/password_reset_email.html" />
+    <list default="true" id="c5fd8838-444b-4543-a7c3-cef03adad847" name="Default" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change beforePath="$PROJECT_DIR$/BA/settings.py" afterPath="$PROJECT_DIR$/BA/settings.py" />
-      <change beforePath="$PROJECT_DIR$/BA/urls.py" afterPath="$PROJECT_DIR$/BA/urls.py" />
-      <change beforePath="$PROJECT_DIR$/db.sqlite3" afterPath="$PROJECT_DIR$/db.sqlite3" />
-      <change beforePath="$PROJECT_DIR$/website/static/website/js/main.js" afterPath="$PROJECT_DIR$/website/static/website/js/main.js" />
-      <change beforePath="$PROJECT_DIR$/website/static/website/level/level01.json" afterPath="$PROJECT_DIR$/website/static/website/level/level01.json" />
-      <change beforePath="$PROJECT_DIR$/website/templates/website/base.html" afterPath="$PROJECT_DIR$/website/templates/base.html" />
-      <change beforePath="$PROJECT_DIR$/website/templates/website/createIdea.html" afterPath="$PROJECT_DIR$/website/templates/website/createIdea.html" />
-      <change beforePath="$PROJECT_DIR$/website/templates/website/game.html" afterPath="$PROJECT_DIR$/website/templates/website/game.html" />
-      <change beforePath="$PROJECT_DIR$/website/templates/website/history.html" afterPath="$PROJECT_DIR$/website/templates/website/history.html" />
-      <change beforePath="$PROJECT_DIR$/website/templates/website/ideas.html" afterPath="$PROJECT_DIR$/website/templates/website/ideas.html" />
-      <change beforePath="$PROJECT_DIR$/website/templates/website/index.html" afterPath="$PROJECT_DIR$/website/templates/website/index.html" />
-      <change beforePath="$PROJECT_DIR$/website/templates/website/phasergame.html" afterPath="$PROJECT_DIR$/website/templates/website/phasergame.html" />
-      <change beforePath="$PROJECT_DIR$/website/urls.py" afterPath="$PROJECT_DIR$/website/urls.py" />
-      <change beforePath="$PROJECT_DIR$/website/views.py" afterPath="$PROJECT_DIR$/website/views.py" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -151,7 +101,7 @@
         <entry file="file://$PROJECT_DIR$/website/views.py">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="306">
-              <caret line="23" column="0" lean-forward="true" selection-start-line="23" selection-start-column="0" selection-end-line="23" selection-end-column="0" />
+              <caret line="23" column="0" lean-forward="false" selection-start-line="23" selection-start-column="0" selection-end-line="23" selection-end-column="0" />
               <folding>
                 <element signature="e#0#33#0" expanded="true" />
                 <element signature="e#507#653#0" expanded="false" />
@@ -220,7 +170,7 @@
         <entry file="file://$PROJECT_DIR$/templates/registration/login.html">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="374">
-              <caret line="22" column="30" lean-forward="true" selection-start-line="22" selection-start-column="30" selection-end-line="22" selection-end-column="30" />
+              <caret line="22" column="30" lean-forward="false" selection-start-line="22" selection-start-column="30" selection-end-line="22" selection-end-column="30" />
               <folding />
             </state>
           </provider>
@@ -604,7 +554,14 @@
       <option name="project" value="LOCAL" />
       <updated>1514850088642</updated>
     </task>
-    <option name="localTasksCounter" value="18" />
+    <task id="LOCAL-00018" summary="jump and run finished&#10;authentification">
+      <created>1514874349687</created>
+      <option name="number" value="00018" />
+      <option name="presentableId" value="LOCAL-00018" />
+      <option name="project" value="LOCAL" />
+      <updated>1514874349687</updated>
+    </task>
+    <option name="localTasksCounter" value="19" />
     <servers />
   </component>
   <component name="TestHistory">
@@ -650,7 +607,7 @@
       <window_info id="Docker" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="false" weight="0.33" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.34010416" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32767764" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="manage.py@BA" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.27670395" sideWeight="0.5" order="12" side_tool="false" content_ui="tabs" />
+      <window_info id="manage.py@BA" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.27670395" sideWeight="0.5" order="12" side_tool="false" content_ui="tabs" />
       <window_info id="SciView" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
@@ -676,7 +633,8 @@
     <MESSAGE value="game start" />
     <MESSAGE value="game files" />
     <MESSAGE value="jump and run" />
-    <option name="LAST_COMMIT_MESSAGE" value="jump and run" />
+    <MESSAGE value="jump and run finished&#10;authentification" />
+    <option name="LAST_COMMIT_MESSAGE" value="jump and run finished&#10;authentification" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -920,7 +878,7 @@
         <state relative-caret-position="289">
           <caret line="17" column="1" lean-forward="false" selection-start-line="17" selection-start-column="1" selection-end-line="17" selection-end-column="1" />
           <folding>
-            <element signature="e#0#37#0" expanded="true" />
+            <element signature="e#0#37#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -930,7 +888,7 @@
         <state relative-caret-position="459">
           <caret line="27" column="41" lean-forward="true" selection-start-line="27" selection-start-column="41" selection-end-line="27" selection-end-column="41" />
           <folding>
-            <element signature="e#626#658#0" expanded="true" />
+            <element signature="e#626#658#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -983,7 +941,7 @@
     <entry file="file://$PROJECT_DIR$/templates/registration/login.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="374">
-          <caret line="22" column="30" lean-forward="true" selection-start-line="22" selection-start-column="30" selection-end-line="22" selection-end-column="30" />
+          <caret line="22" column="30" lean-forward="false" selection-start-line="22" selection-start-column="30" selection-end-line="22" selection-end-column="30" />
           <folding />
         </state>
       </provider>
@@ -1015,7 +973,7 @@
     <entry file="file://$PROJECT_DIR$/website/views.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="306">
-          <caret line="23" column="0" lean-forward="true" selection-start-line="23" selection-start-column="0" selection-end-line="23" selection-end-column="0" />
+          <caret line="23" column="0" lean-forward="false" selection-start-line="23" selection-start-column="0" selection-end-line="23" selection-end-column="0" />
           <folding>
             <element signature="e#0#33#0" expanded="true" />
             <element signature="e#507#653#0" expanded="false" />
