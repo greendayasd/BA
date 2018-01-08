@@ -4,55 +4,46 @@
 
 {% block title %}Ideas{% endblock %}
 
-{% block head %}
-<style>
-        #ideas {
-            font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
-            border-collapse: collapse;
-            width: 60%;
-        }
 
-        #ideas td, #ideas th {
-            border: 1px solid #ddd;
-            padding: 8px;
-        }
-
-        #ideas tr:nth-child(even){
-            background-color: #e2e2e2;
-            color:black}
-
-        #ideas tr:hover {background-color: #ddd;}
-
-        #ideas th {
-            padding-top: 12px;
-            padding-bottom: 12px;
-            text-align: left;
-            background-color:indianred;
-            color: white;
-        }
-
-        table{
-            margin: 20px;
-        }
-    </style>
-
-    <style>
-        p {margin-left: 80px;}
-        a {margin-left: 30px;}
-        h1 {margin-left: 80px;}
-        h4 {margin-left: 80px;}
-
-    </style>
-{% endblock %}
 {% block body %}
+<style>
+    #ideas {
+        font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
+        border-collapse: collapse;
+        width: 60%;
+    }
+
+    #ideas td, #ideas th {
+        border: 1px solid #ddd;
+        padding: 8px;
+    }
+
+    #ideas tr:nth-child(even){
+        background-color: #e2e2e2;
+        color:black}
+
+    #ideas tr:hover {background-color: #ddd;}
+
+    #ideas th {
+        padding-top: 12px;
+        padding-bottom: 12px;
+        text-align: left;
+        background-color:#2e23cd;
+        color: white;
+    }
+
+    table{
+        margin: 20px;
+    }
+</style>
 
 <link rel="stylesheet" type="text/css" href="{% static 'website/css/style.css' %}" />
 
 
  {% if user.is_authenticated %}
-     <a style="font-size: 30px" href="{% url 'website:idea_new'%}"> Submit your own Idea! </a>
+     <a style="font-size: 28px" style="margin-left: 90px" href="{% url 'website:idea_new'%}"> Submit your own Idea! </a>
  {% else %}
-     <a style="font-size: 30px" href="{% url 'login'%}?next={{request.path}}">Login to submit your own Idea!</a>
+     <a style="font-size: 28px" style="margin-top: 45px" href="{% url 'login'%}?next={{request.path}}">Login to submit your own Idea!</a>
  {% endif %}
 
     <p> {{ vote }}</p>
@@ -69,7 +60,8 @@
             <td>{{ idea.version.label }}</td>
             <td>{{ idea.description }}</td>
             <td>{{ idea.user.username}}</td>
-            <td>{{ idea.pub_date.day }}.{{ idea.pub_date.month }}.{{ idea.pub_date.year }} {{ idea.pub_date.time }}</td>
+            <td>{{ idea.pub_date}}</td>
+            <!--<td>{{ idea.pub_date.day }}.{{ idea.pub_date.month }}.{{ idea.pub_date.year }} {{ idea.pub_date.time }}</td> -->
         </tr>
     {% endfor %}
     </table>

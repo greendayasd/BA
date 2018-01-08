@@ -2,16 +2,18 @@
 // =============================================================================
 // globals
 // =============================================================================
+Crowdjump.Game = function(game){
+    const CONST_DOUBLE_JUMP = false;
+    const CONST_COINS = false;
+    const CONST_ENEMIES = false;
+    const CONST_ANIMATE_CHARACTER = false;
+    const CONST_TIME = false;
 
-const CONST_DOUBLE_JUMP = false;
-const CONST_COINS = false;
-const CONST_ENEMIES = false;
-const CONST_ANIMATE_CHARACTER = false;
-const CONST_TIME = false;
+    const LEVEL_COUNT = 1;
 
-const LEVEL_COUNT = 1;
+    var second_jump = true;
+}
 
-var second_jump = true;
 
 // =============================================================================
 // sprites
@@ -174,7 +176,7 @@ PlayState.init = function (data) {
     jump = function () {
         let didJump = this.hero.jump();
         if (didJump) {
-            this.sfx.jump.play();
+            this.sfx.jump.play("",0,0.3,false,true);
         }
     };
 
@@ -213,7 +215,7 @@ PlayState.preload = function () {
 
     //audio
     this.game.load.audio('sfx:jump', audio + 'jump.wav');
-    this.game.load.audio('sfx:jump', audio + 'coin.wav');
+    this.game.load.audio('sfx:coin', audio + 'coin.wav');
     this.game.load.audio('sfx:stomp', audio + 'stomp.wav');
     this.game.load.audio('sfx:flag', audio + 'flag.wav');
 
@@ -382,8 +384,11 @@ PlayState._onHeroVsEnemy = function (hero, enemy) {
 
 PlayState._onHeroVsFlag = function (hero, flag) {
     this.sfx.flag.play();
-    this.game.state.restart(true, false, { level: this.level + 1 });
-    // TODO: Winscreen
+    if (true){
+       this.game.state.restart(true, false, { level: this.level + 1 });
+    }else{
+      this.state.start('Endscreen');
+    }
 
 };
 
@@ -433,8 +438,8 @@ PlayState._spawnFlag = function (x, y) {
 // entry point
 // =============================================================================
 
-window.onload = function () {
-    var game = new Phaser.Game(960, 600, Phaser.AUTO, 'crowdjump');
-    game.state.add('play', PlayState);
-    game.state.start('play', true, false, {level: 0});
-};
+// window.onload = function () {
+//     //var game = new Phaser.Game(960, 600, Phaser.AUTO, 'crowdjump');
+//     game.state.add('play', PlayState);
+//     game.state.start('play', true, false, {level: 0});
+// };

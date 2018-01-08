@@ -41,7 +41,7 @@ class GameView(generic.View):
     template_name = 'website/game.html'
 
     def get(self, request, *args, **kwargs):
-        return render(request, 'website/game.html')
+        return render(request, 'website/game_alt.html')
 
 
 class PhaserGameView(generic.View):

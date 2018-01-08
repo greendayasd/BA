@@ -5,13 +5,16 @@
 <link rel="stylesheet" type="text/css" href="{% static 'website/css/style.css' %}" />
 
 {% block head %}
+    <script src="{% static "website/js/phaser.min.js" %}"></script>
+    <script src="{% static "website/js/startmenu.js" %}"></script>
+    <script src="{% static "website/js/game.js" %}"></script>
+    <script src="{% static "website/js/endscreen.js" %}"></script>
 
 {% endblock %}
 {% block body %}
     <meta charset="utf-8">
 
-    <script src="{% static "website/js/phaser.min.js" %}"></script>
-    <script src="{% static "website/js/game.js" %}"></script>
+    <script src="{% static "website/js/main.js" %}"></script>
 
     <style>
         canvas {
