@@ -6,18 +6,24 @@ Crowdjump.Menu = function(game){
 };
 
 Crowdjump.Menu.prototype = {
-    create:function () {
-        this.game.stage.backgroundColor = '#ffffff';
-        startGame = this.add.text(10,10,'Start Game', {fill: "#000000"});
-        endGame = this.add.text(10,40,'End Game', {fill: "#000000"});
+    create: function(){
+        logo = this.add.sprite(this.world.centerX,
+                               this.world.centerY -80, 'logo');
+        logo.anchor.set(0.5);
+        logo.inputEnabled = true;
+        logo.events.onInputDown.add(this.start, {'points': 1}, this);
 
+
+        startGame = this.add.text(this.world.centerX - 50, this.world.centerY + 30, 'My score is 0', {fill: '#ffffff'});
         startGame.inputEnabled = true;
-        startGame.events.onInputDown.add(this.phasergame,this)
+        startGame.events.onInputDown.add(this.start, {'points': 1}, this);
 
-
-        this.game.stage.backgroundColor = '#ffff00';
-        endGame.inputEnabled = true;
-        endGame.events.onInputDown.add(this.endscreen,this)
+        this.game.stage.backgroundColor = '#1948cd';
+    },
+    start: function(){
+        startGame.text = 'My score is '+this.points++;
+   },
+    update: function(){
     },
 
     phasergame: function () {

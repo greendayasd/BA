@@ -1,15 +1,9 @@
+var Crowdjump = {};
 
 // =============================================================================
 // globals
 // =============================================================================
 Crowdjump.Game = function(game){
-    const CONST_DOUBLE_JUMP = false;
-    const CONST_COINS = false;
-    const CONST_ENEMIES = false;
-    const CONST_ANIMATE_CHARACTER = false;
-    const CONST_TIME = false;
-
-    const LEVEL_COUNT = 1;
 
     var second_jump = true;
 }
@@ -191,41 +185,41 @@ PlayState.init = function (data) {
 
 // load game assets here
 PlayState.preload = function () {
-    this.game.load.json('level:0', level + 'level00.json');
-    this.game.load.json('level:1', level + 'level01.json');
-
-    //files
-    this.game.load.image('background', files + 'background.png');
-    this.game.load.image('ground', files + 'ground.png');
-    this.game.load.image('grass:8x1', files + 'grass_8x1.png');
-    this.game.load.image('grass:6x1', files + 'grass_6x1.png');
-    this.game.load.image('grass:4x1', files + 'grass_4x1.png');
-    this.game.load.image('grass:2x1', files + 'grass_2x1.png');
-    this.game.load.image('grass:1x1', files + 'grass_1x1.png');
-    this.game.load.image('invisible-wall', files + 'invisible_wall.png');
-    this.game.load.image('icon:coin', files + 'coin_icon.png');
-
-    //character
-    if (CONST_ANIMATE_CHARACTER){
-       this.game.load.spritesheet('hero', files + 'hero.png', 36, 42);
-    }
-    else{
-        this.game.load.image('hero', files + 'hero_stopped.png');
-    }
-
-    //audio
-    this.game.load.audio('sfx:jump', audio + 'jump.wav');
-    this.game.load.audio('sfx:coin', audio + 'coin.wav');
-    this.game.load.audio('sfx:stomp', audio + 'stomp.wav');
-    this.game.load.audio('sfx:flag', audio + 'flag.wav');
-
-    //sprites
-    this.game.load.spritesheet('coin', files + 'coin_animated.png', 22, 22);
-    this.game.load.spritesheet('spider', files + 'spider.png', 42, 32);
-    this.game.load.spritesheet('flag', files + 'flag.png', 42, 66);
-
-    //fonts
-    this.game.load.image('font:numbers', files + 'numbers.png');
+    // this.game.load.json('level:0', level + 'level00.json');
+    // this.game.load.json('level:1', level + 'level01.json');
+    //
+    // //files
+    // this.game.load.image('background', files + 'background.png');
+    // this.game.load.image('ground', files + 'ground.png');
+    // this.game.load.image('grass:8x1', files + 'grass_8x1.png');
+    // this.game.load.image('grass:6x1', files + 'grass_6x1.png');
+    // this.game.load.image('grass:4x1', files + 'grass_4x1.png');
+    // this.game.load.image('grass:2x1', files + 'grass_2x1.png');
+    // this.game.load.image('grass:1x1', files + 'grass_1x1.png');
+    // this.game.load.image('invisible-wall', files + 'invisible_wall.png');
+    // this.game.load.image('icon:coin', files + 'coin_icon.png');
+    //
+    // //character
+    // if (CONST_ANIMATE_CHARACTER){
+    //    this.game.load.spritesheet('hero', files + 'hero.png', 36, 42);
+    // }
+    // else{
+    //     this.game.load.image('hero', files + 'hero_stopped.png');
+    // }
+    //
+    // //audio
+    // this.game.load.audio('sfx:jump', audio + 'jump.wav');
+    // this.game.load.audio('sfx:coin', audio + 'coin.wav');
+    // this.game.load.audio('sfx:stomp', audio + 'stomp.wav');
+    // this.game.load.audio('sfx:flag', audio + 'flag.wav');
+    //
+    // //sprites
+    // this.game.load.spritesheet('coin', files + 'coin_animated.png', 22, 22);
+    // this.game.load.spritesheet('spider', files + 'spider.png', 42, 32);
+    // this.game.load.spritesheet('flag', files + 'flag.png', 42, 66);
+    //
+    // //fonts
+    // this.game.load.image('font:numbers', files + 'numbers.png');
 };
 
 // create game entities and set up world here

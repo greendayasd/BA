@@ -1,3 +1,5 @@
+var Crowdjump = {};
+
 Crowdjump.Endscreen = function(game){
     var replay;
     var score;
@@ -11,7 +13,8 @@ Crowdjump.Endscreen.prototype = {
         replay.inputEnabled = true;
         replay.events.onInputDown.add(this.go, this);
 
-        score = this.add.text();
+        var scoreText = "Congratulations, you beat the level in " + this.game.time.totalElapsedSeconds() + " seconds!";
+        score = this.add.text(30,30, scoreText);
     },
 
     go: function(){
