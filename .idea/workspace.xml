@@ -2,17 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="c5fd8838-444b-4543-a7c3-cef03adad847" name="Default" comment="">
-      <change beforePath="" afterPath="$PROJECT_DIR$/website/static/website/js/preloader.js" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change beforePath="$PROJECT_DIR$/db.sqlite3" afterPath="$PROJECT_DIR$/db.sqlite3" />
-      <change beforePath="$PROJECT_DIR$/website/static/website/js/boot.js" afterPath="$PROJECT_DIR$/website/static/website/js/boot.js" />
-      <change beforePath="$PROJECT_DIR$/website/static/website/js/endscreen.js" afterPath="$PROJECT_DIR$/website/static/website/js/endscreen.js" />
-      <change beforePath="$PROJECT_DIR$/website/static/website/js/game.js" afterPath="$PROJECT_DIR$/website/static/website/js/game.js" />
-      <change beforePath="$PROJECT_DIR$/website/static/website/js/main.js" afterPath="$PROJECT_DIR$/website/static/website/js/main.js" />
-      <change beforePath="$PROJECT_DIR$/website/static/website/js/startmenu.js" afterPath="$PROJECT_DIR$/website/static/website/js/startmenu.js" />
-      <change beforePath="$PROJECT_DIR$/website/static/website/level/level00.json" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/website/static/website/level/level01.json" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/website/templates/website/phasergame.html" afterPath="$PROJECT_DIR$/website/templates/website/phasergame.html" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -562,7 +552,14 @@
       <option name="project" value="LOCAL" />
       <updated>1515434310975</updated>
     </task>
-    <option name="localTasksCounter" value="24" />
+    <task id="LOCAL-00024" summary="loading bar">
+      <created>1515443620037</created>
+      <option name="number" value="00024" />
+      <option name="presentableId" value="LOCAL-00024" />
+      <option name="project" value="LOCAL" />
+      <updated>1515443620037</updated>
+    </task>
+    <option name="localTasksCounter" value="25" />
     <servers />
   </component>
   <component name="TestHistory">
@@ -637,7 +634,8 @@
     <MESSAGE value="jump and run finished&#10;authentification" />
     <MESSAGE value="requests working" />
     <MESSAGE value="game states in Arbeit" />
-    <option name="LAST_COMMIT_MESSAGE" value="game states in Arbeit" />
+    <MESSAGE value="loading bar" />
+    <option name="LAST_COMMIT_MESSAGE" value="loading bar" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -653,11 +651,6 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/website/static/website/images/background.png">
-      <provider selected="true" editor-type-id="images">
-        <state />
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/website/migrations/0005_auto_20171231_1547.py" />
     <entry file="das://table:/b346ff31/4ce13782-0cb6-4477-999a-0fe126c9f2cc/main.sqlite_master">
       <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
@@ -1004,6 +997,14 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="19" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/website/static/website/js/phaser.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="221">
+          <caret line="13" column="46" lean-forward="false" selection-start-line="13" selection-start-column="46" selection-end-line="13" selection-end-column="46" />
           <folding />
         </state>
       </provider>
