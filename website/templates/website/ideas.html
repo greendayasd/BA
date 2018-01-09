@@ -71,23 +71,27 @@
 
     <p> {{ vote }}</p>
 {% if idea_list %}
-     <table id="ideas">
+     <table class="Table" id="ideas">
+        <thead>
           <tr>
-            <th>Version</th>
-            <th>Request</th>
-            <th>User</th>
-            <th>Date</th>
-            <th>Estimated Time</th>
+            <th scope="col">Version</th>
+            <th scope="col">Request</th>
+            <th scope="col">User</th>
+            <th scope="col">Date</th>
+            <th scope="col">Estimated Time</th>
           </tr>
+        </thead>
     {% for idea in idea_list %}
-        <tr>
-            <td>{{ idea.version.label }}</td>
+        <tbody>
+          <tr>
+            <th>{{ idea.version.label }}</th>
             <td>{{ idea.description }}</td>
             <td>{{ idea.user.username}}</td>
             <td>{{ idea.pub_date}}</td>
             <td>{{ idea.estimated_time}}</td>
             <!--<td>{{ idea.pub_date.day }}.{{ idea.pub_date.month }}.{{ idea.pub_date.year }} {{ idea.pub_date.time }}</td> -->
-        </tr>
+          </tr>
+        </tbody>
     {% endfor %}
     </table>
 {% else %}

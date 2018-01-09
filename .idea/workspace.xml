@@ -1,29 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="c5fd8838-444b-4543-a7c3-cef03adad847" name="Default" comment="">
-      <change beforePath="" afterPath="$PROJECT_DIR$/website/migrations/0013_idea_estimated_time.py" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/website/static/website/audio/Test.mp3" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/website/static/website/audio/Test2.mp3" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/website/static/website/audio/Test3.mp3" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/website/static/website/images/alienbubble.png" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/website/static/website/images/play.png" />
+    <list default="true" id="c5fd8838-444b-4543-a7c3-cef03adad847" name="Default" comment="all states finished&#10;better text">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change beforePath="$PROJECT_DIR$/db.sqlite3" afterPath="$PROJECT_DIR$/db.sqlite3" />
-      <change beforePath="$PROJECT_DIR$/website/models.py" afterPath="$PROJECT_DIR$/website/models.py" />
-      <change beforePath="$PROJECT_DIR$/website/static/website/js/background.png" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/website/static/website/js/boot.js" afterPath="$PROJECT_DIR$/website/static/website/js/boot.js" />
-      <change beforePath="$PROJECT_DIR$/website/static/website/js/endscreen.js" afterPath="$PROJECT_DIR$/website/static/website/js/endscreen.js" />
-      <change beforePath="$PROJECT_DIR$/website/static/website/js/game.js" afterPath="$PROJECT_DIR$/website/static/website/js/game.js" />
-      <change beforePath="$PROJECT_DIR$/website/static/website/js/main.js" afterPath="$PROJECT_DIR$/website/static/website/js/main.js" />
-      <change beforePath="$PROJECT_DIR$/website/static/website/js/preloader.js" afterPath="$PROJECT_DIR$/website/static/website/js/preloader.js" />
-      <change beforePath="$PROJECT_DIR$/website/static/website/js/startmenu.js" afterPath="$PROJECT_DIR$/website/static/website/js/startmenu.js" />
-      <change beforePath="$PROJECT_DIR$/website/static/website/level/level1.json" afterPath="$PROJECT_DIR$/website/static/website/level/level1.json" />
-      <change beforePath="$PROJECT_DIR$/website/templates/base.html" afterPath="$PROJECT_DIR$/website/templates/base.html" />
-      <change beforePath="$PROJECT_DIR$/website/templates/website/history.html" afterPath="$PROJECT_DIR$/website/templates/website/history.html" />
       <change beforePath="$PROJECT_DIR$/website/templates/website/ideas.html" afterPath="$PROJECT_DIR$/website/templates/website/ideas.html" />
-      <change beforePath="$PROJECT_DIR$/website/templates/website/index.html" afterPath="$PROJECT_DIR$/website/templates/website/index.html" />
-      <change beforePath="$PROJECT_DIR$/website/templates/website/phasergame.html" afterPath="$PROJECT_DIR$/website/templates/website/phasergame.html" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -78,11 +59,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="index.html" pinned="false" current-in-tab="true">
+      <file leaf-file-name="index.html" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/website/templates/website/index.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="357">
-              <caret line="21" column="0" lean-forward="true" selection-start-line="21" selection-start-column="0" selection-end-line="21" selection-end-column="0" />
+            <state relative-caret-position="442">
+              <caret line="26" column="88" lean-forward="false" selection-start-line="26" selection-start-column="88" selection-end-line="26" selection-end-column="88" />
               <folding>
                 <element signature="e#222#247#0#HTML" expanded="true" />
               </folding>
@@ -94,7 +75,7 @@
         <entry file="file://$PROJECT_DIR$/website/static/website/js/game.js">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="-782">
-              <caret line="213" column="0" lean-forward="true" selection-start-line="213" selection-start-column="0" selection-end-line="214" selection-end-column="78" />
+              <caret line="213" column="0" lean-forward="false" selection-start-line="213" selection-start-column="0" selection-end-line="214" selection-end-column="78" />
               <folding>
                 <element signature="e#1382#1796#0" expanded="false" />
                 <element signature="e#1835#1910#0" expanded="false" />
@@ -124,7 +105,7 @@
         <entry file="file://$PROJECT_DIR$/website/static/website/js/endscreen.js">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="340">
-              <caret line="26" column="35" lean-forward="true" selection-start-line="26" selection-start-column="35" selection-end-line="26" selection-end-column="35" />
+              <caret line="26" column="35" lean-forward="false" selection-start-line="26" selection-start-column="35" selection-end-line="26" selection-end-column="35" />
               <folding />
             </state>
           </provider>
@@ -153,11 +134,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="ideas.html" pinned="false" current-in-tab="false">
+      <file leaf-file-name="ideas.html" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/website/templates/website/ideas.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="187">
-              <caret line="51" column="85" lean-forward="false" selection-start-line="51" selection-start-column="85" selection-end-line="51" selection-end-column="89" />
+            <state relative-caret-position="357">
+              <caret line="80" column="47" lean-forward="true" selection-start-line="80" selection-start-column="47" selection-end-line="80" selection-end-column="47" />
               <folding>
                 <element signature="e#839#864#0#HTML" expanded="true" />
                 <element signature="e#1512#1538#0#HTML" expanded="true" />
@@ -260,12 +241,12 @@
         <option value="$PROJECT_DIR$/website/static/website/js/game.js" />
         <option value="$PROJECT_DIR$/website/models.py" />
         <option value="$PROJECT_DIR$/website/templates/website/tabelStyle.html" />
-        <option value="$PROJECT_DIR$/website/templates/website/ideas.html" />
         <option value="$PROJECT_DIR$/website/templates/website/phasergame.html" />
         <option value="$PROJECT_DIR$/website/static/website/js/endscreen.js" />
         <option value="$PROJECT_DIR$/website/templates/base.html" />
         <option value="$PROJECT_DIR$/website/templates/website/history.html" />
         <option value="$PROJECT_DIR$/website/templates/website/index.html" />
+        <option value="$PROJECT_DIR$/website/templates/website/ideas.html" />
       </list>
     </option>
   </component>
@@ -281,11 +262,10 @@
     <detection-done>true</detection-done>
     <sorting>DEFINITION_ORDER</sorting>
   </component>
-  <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="-15" />
-    <option name="y" value="7" />
-    <option name="width" value="890" />
-    <option name="height" value="1027" />
+  <component name="ProjectFrameBounds">
+    <option name="x" value="628" />
+    <option name="width" value="1301" />
+    <option name="height" value="1080" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true">
     <ConfirmationsSetting value="2" id="Add" />
@@ -643,7 +623,14 @@
       <option name="project" value="LOCAL" />
       <updated>1515443666958</updated>
     </task>
-    <option name="localTasksCounter" value="26" />
+    <task id="LOCAL-00026" summary="all states finished&#10;better text">
+      <created>1515469046783</created>
+      <option name="number" value="00026" />
+      <option name="presentableId" value="LOCAL-00026" />
+      <option name="project" value="LOCAL" />
+      <updated>1515469046783</updated>
+    </task>
+    <option name="localTasksCounter" value="27" />
     <servers />
   </component>
   <component name="TestHistory">
@@ -676,7 +663,7 @@
     </history-entry>
   </component>
   <component name="ToolWindowManager">
-    <frame x="-8" y="-8" width="1936" height="1096" extended-state="6" />
+    <frame x="628" y="0" width="1301" height="1080" extended-state="0" />
     <editor active="true" />
     <layout>
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
@@ -685,11 +672,11 @@
       <window_info id="Python Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.24923703" sideWeight="0.49479166" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3552781" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.13333334" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.19922179" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Docker" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="false" weight="0.33" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.34010416" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32767764" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="manage.py@BA" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.27670395" sideWeight="0.49166667" order="12" side_tool="false" content_ui="tabs" />
+      <window_info id="manage.py@BA" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.2812823" sideWeight="0.49166667" order="12" side_tool="false" content_ui="tabs" />
       <window_info id="SciView" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
@@ -719,7 +706,8 @@
     <MESSAGE value="requests working" />
     <MESSAGE value="game states in Arbeit" />
     <MESSAGE value="loading bar" />
-    <option name="LAST_COMMIT_MESSAGE" value="loading bar" />
+    <MESSAGE value="all states finished&#10;better text" />
+    <option name="LAST_COMMIT_MESSAGE" value="all states finished&#10;better text" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -1041,17 +1029,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/website/templates/website/ideas.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="187">
-          <caret line="51" column="85" lean-forward="false" selection-start-line="51" selection-start-column="85" selection-end-line="51" selection-end-column="89" />
-          <folding>
-            <element signature="e#839#864#0#HTML" expanded="true" />
-            <element signature="e#1512#1538#0#HTML" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/website/templates/website/phasergame.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="476">
@@ -1063,7 +1040,7 @@
     <entry file="file://$PROJECT_DIR$/website/static/website/js/game.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-782">
-          <caret line="213" column="0" lean-forward="true" selection-start-line="213" selection-start-column="0" selection-end-line="214" selection-end-column="78" />
+          <caret line="213" column="0" lean-forward="false" selection-start-line="213" selection-start-column="0" selection-end-line="214" selection-end-column="78" />
           <folding>
             <element signature="e#1382#1796#0" expanded="false" />
             <element signature="e#1835#1910#0" expanded="false" />
@@ -1091,7 +1068,7 @@
     <entry file="file://$PROJECT_DIR$/website/static/website/js/endscreen.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="340">
-          <caret line="26" column="35" lean-forward="true" selection-start-line="26" selection-start-column="35" selection-end-line="26" selection-end-column="35" />
+          <caret line="26" column="35" lean-forward="false" selection-start-line="26" selection-start-column="35" selection-end-line="26" selection-end-column="35" />
           <folding />
         </state>
       </provider>
@@ -1133,10 +1110,21 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/website/templates/website/index.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="357">
-          <caret line="21" column="0" lean-forward="true" selection-start-line="21" selection-start-column="0" selection-end-line="21" selection-end-column="0" />
+        <state relative-caret-position="442">
+          <caret line="26" column="88" lean-forward="false" selection-start-line="26" selection-start-column="88" selection-end-line="26" selection-end-column="88" />
           <folding>
             <element signature="e#222#247#0#HTML" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/website/templates/website/ideas.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="357">
+          <caret line="80" column="47" lean-forward="true" selection-start-line="80" selection-start-column="47" selection-end-line="80" selection-end-column="47" />
+          <folding>
+            <element signature="e#839#864#0#HTML" expanded="true" />
+            <element signature="e#1512#1538#0#HTML" expanded="true" />
           </folding>
         </state>
       </provider>
