@@ -5,53 +5,64 @@
 {% block title %}History{% endblock %}
 
 {% block head %}
-    <style>
-        #versions {
-            font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
-            border-collapse: collapse;
-            width: 40%;
-        }
+<style>
+    #versions {
+        font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
+        border-collapse: collapse;
+        width: 60%;
+    }
 
-        #versions td, #versions th {
-            border: 1px solid #ddd;
-            padding: 8px;
-        }
+    #versions td, #versions th {
+        border: 1px solid #ddd;
+        padding: 8px;
+    }
 
-        #versions tr:nth-child(even){
-            background-color: #121212;
-            color:white}
+    #versions tr:nth-child(even){
+        background-color: #e2e2e2;
+        color:black}
 
-        #versions th {
-            padding-top: 12px;
-            padding-bottom: 12px;
-            text-align: left;
-            background-color: #413FC0;
-            color: white;
-        }
+    #versions tr:hover {background-color: #ddd;}
 
-        table{
-        margin: 20px;
-        }
-    </style>
+    #versions th {
+        padding-top: 12px;
+        padding-bottom: 12px;
+        text-align: left;
+        background-color:#2e23cd;
+        color: white;
+    }
+
+    table{
+        margin-left:100px;
+
+    }
+</style>
 
 {% endblock %}
 {% block body %}
 
 <link rel="stylesheet" type="text/css" href="{% static 'website/css/style.css' %}" />
 
-<h1> Previous Versions and Patchnotes</h1>
+<div class="container"  style="max-width: 1000px">
+    <h1> Previous Versions and Patchnotes  </h1>
+    <h4>
+        Here you can find the features that got implemented, as well as the user who submitted the idea. <br>
+        You want your own special feature? Submit your own on <a href="{% url "website:ideas" %}">Ideas </a><br><br>
+    </h4>
+</div>
 {% if version_list %}
-     <table id="versions">
+     <table id="versions" style="max-width: 1200px">
           <tr>
-            <th>Version</th>
-            <th>Change</th>
-            <th>User</th>
+              <th>Version</th>
+              <th>Change</th>
+              <th>User</th>
+              <th>Date</th>
           </tr>
     {% for version in version_list %}
         <tr>
             <td>{{ version.label }}</td>
             <td>{{ version.change }}</td>
             <td>{{ version.submitter.user.username}}</td>
+            <td>{{ version.pub_date}}</td>
         </tr>
     {% endfor %}
     </table>

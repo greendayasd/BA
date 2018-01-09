@@ -10,19 +10,24 @@
 
 <link rel="stylesheet" type="text/css" href="{% static 'website/css/style.css' %}" />
 {% block body %}
-    <style>
-        p {margin-left: 80px;}
-        h1 {margin-left: 80px;}
-        h4 {margin-left: 80px;}
 
-    </style>
-<h1> Welcome to CrowdJump!  </h1>
-<h4> <br>The goal is simple: Control the ball the left and right arrow keys and press up or space to jump and try to reach the flag!<br>
-</h4>
-<p>
-    While the game may seem pretty simple, you can submit feature requests to improve the game according to your wishes.<br>
-    At the moment, every version a random idea will be chosen. You wish you could influence, what Idea will be implemented next? <br>
-    You can not only submit ideas for game features but also for general things like a new voting system or a method to communicate!</br>
-</p>
+
+<div class="container"  style="max-width: 1000px">
+    <img src="{% static 'website/images/logo.png' %}">
+    <h1> Welcome to CrowdJump!  </h1>
+    <h4> CrowdJump is a bachelor thesis in which you can submit your ideas to improve a simple game to your likings!<br><br>
+         The goal of the thesis is to observe how a game is designed bottom-up with a crowd and how the decision finding<br>
+         process is made. <br><br><br>
+
+
+         On <a href="{% url "website:ideas" %}">History</a> you can find the changes implemented in previous iterations of the game. <br><br>
+
+         If you played the game and want to submit a new feature, you should visit <a href="{% url "website:ideas" %}">Ideas</a>. <br><br>
+
+         The game itself can be found <a href="{% url "website:phasergame" %}">here</a>.
+    </h4>
+    <article>
+    </article>
+</div>
 
 {% endblock %}

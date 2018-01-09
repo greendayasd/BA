@@ -1,17 +1,14 @@
+var Crowdjump = Crowdjump || {};
 
 // =============================================================================
 // globals
 // =============================================================================
+Crowdjump.Game = function(game){
 
-const CONST_DOUBLE_JUMP = false;
-const CONST_COINS = false;
-const CONST_ENEMIES = false;
-const CONST_ANIMATE_CHARACTER = false;
-const CONST_TIME = false;
+    var second_jump = true;
+}
 
-const LEVEL_COUNT = 1;
-
-var second_jump = true;
+Crowdjump.Game = {};
 
 // =============================================================================
 // sprites
@@ -155,13 +152,8 @@ Spider.prototype.die = function () {
 // game states
 // =============================================================================
 
-PlayState = {};
-var files = '/static/website/gamefiles/';
-var level = '/static/website/level/';
-var audio = '/static/website/audio/';
 
-
-PlayState.init = function (data) {
+Crowdjump.Game.init = function (data) {
     this.game.renderer.renderSession.roundPixels = true;
 
     this.keys = this.game.input.keyboard.addKeys({
@@ -174,60 +166,28 @@ PlayState.init = function (data) {
     jump = function () {
         let didJump = this.hero.jump();
         if (didJump) {
-            this.sfx.jump.play();
+            this.sfx.jump.play("",0,0.3,false,true);
         }
     };
 
     this.keys.up.onDown.add(jump, this);
     this.keys.space.onDown.add(jump, this);
 
-    this.coinPickupCount = 0;
+    if (typeof  data !== 'undefined'){
+        this.level =  data.level;
 
+    }else{
+        this.level =  0;
 
-    this.level = (data.level || 0) % LEVEL_COUNT;
+    }
 };
 
 // load game assets here
-PlayState.preload = function () {
-    this.game.load.json('level:0', level + 'level00.json');
-    this.game.load.json('level:1', level + 'level01.json');
-
-    //files
-    this.game.load.image('background', files + 'background.png');
-    this.game.load.image('ground', files + 'ground.png');
-    this.game.load.image('grass:8x1', files + 'grass_8x1.png');
-    this.game.load.image('grass:6x1', files + 'grass_6x1.png');
-    this.game.load.image('grass:4x1', files + 'grass_4x1.png');
-    this.game.load.image('grass:2x1', files + 'grass_2x1.png');
-    this.game.load.image('grass:1x1', files + 'grass_1x1.png');
-    this.game.load.image('invisible-wall', files + 'invisible_wall.png');
-    this.game.load.image('icon:coin', files + 'coin_icon.png');
-
-    //character
-    if (CONST_ANIMATE_CHARACTER){
-       this.game.load.spritesheet('hero', files + 'hero.png', 36, 42);
-    }
-    else{
-        this.game.load.image('hero', files + 'hero_stopped.png');
-    }
-
-    //audio
-    this.game.load.audio('sfx:jump', audio + 'jump.wav');
-    this.game.load.audio('sfx:jump', audio + 'coin.wav');
-    this.game.load.audio('sfx:stomp', audio + 'stomp.wav');
-    this.game.load.audio('sfx:flag', audio + 'flag.wav');
-
-    //sprites
-    this.game.load.spritesheet('coin', files + 'coin_animated.png', 22, 22);
-    this.game.load.spritesheet('spider', files + 'spider.png', 42, 32);
-    this.game.load.spritesheet('flag', files + 'flag.png', 42, 66);
-
-    //fonts
-    this.game.load.image('font:numbers', files + 'numbers.png');
+Crowdjump.Game.preload = function () {
 };
 
 // create game entities and set up world here
-PlayState.create = function () {
+Crowdjump.Game.create = function () {
     // create sound entities
     this.sfx = {
         jump: this.game.add.audio('sfx:jump'),
@@ -240,19 +200,34 @@ PlayState.create = function () {
     this._loadLevel(this.game.cache.getJSON(`level:${this.level}`));
 
     this._createHud();
+    this._createTimerHud();
+
+    if (CONST_PAUSE){
+        this.pausedIndicator = this.add.text(0, 0, 'paused', {fill: 'black', font: '48px sans-serif'});
+        this.pausedIndicator.alignIn(this.world.bounds, Phaser.CENTER);
+        this.pausedIndicator.exists = false;
+
+        // We place this on the Stage, above the World, so we can toggle the World alpha in `paused`/`resumed`.
+        this.stage.addChild(this.pausedIndicator);
+    }
+
+
+    this.input.keyboard.addKey(Phaser.KeyCode.R).onUp.add(this.restart, this);
+    this.roundTimer = game.time.events.loop(Phaser.Timer.SECOND, this.updateTimer,this);
 };
 
-PlayState.update = function () {
+Crowdjump.Game.update = function () {
     this._handleCollisions();
     this._handleInput();
 
     var elapsedTime = Math.floor(this.game.time.totalElapsedSeconds());
 
-    this.timeFont.text = `${elapsedTime}`;
+    var seconds = Math.abs(game.timeElapsed / 1 );
+    this.timeFont.text = `${seconds}`;
     this.coinFont.text = `x${this.coinPickupCount}`;
 };
 
-PlayState._handleCollisions = function () {
+Crowdjump.Game._handleCollisions = function () {
     this.game.physics.arcade.collide(this.spiders, this.platforms);
     this.game.physics.arcade.collide(this.spiders, this.enemyWalls);
     this.game.physics.arcade.collide(this.hero, this.platforms);
@@ -269,7 +244,7 @@ PlayState._handleCollisions = function () {
         }, this);
 };
 
-PlayState._handleInput = function () {
+Crowdjump.Game._handleInput = function () {
     if (this.keys.left.isDown) { // move hero left
         this.hero.move(-1);
     }
@@ -281,7 +256,7 @@ PlayState._handleInput = function () {
     }
 };
 
-PlayState._loadLevel = function (data) {
+Crowdjump.Game._loadLevel = function (data) {
     // create all the groups/layers that we need
 
     this.bgDecoration = this.game.add.group();
@@ -313,7 +288,7 @@ PlayState._loadLevel = function (data) {
     this.game.physics.arcade.gravity.y = GRAVITY;
 };
 
-PlayState._spawnPlatform = function (platform) {
+Crowdjump.Game._spawnPlatform = function (platform) {
     let sprite = this.platforms.create(
         platform.x, platform.y, platform.image);
 
@@ -325,7 +300,7 @@ PlayState._spawnPlatform = function (platform) {
     this._spawnEnemyWall(platform.x + sprite.width, platform.y, 'right');
 };
 
-PlayState._spawnEnemyWall = function (x, y, side) {
+Crowdjump.Game._spawnEnemyWall = function (x, y, side) {
     let sprite = this.enemyWalls.create(x, y, 'invisible-wall');
     // anchor and y displacement
     sprite.anchor.set(side === 'left' ? 1 : 0, 1);
@@ -336,7 +311,7 @@ PlayState._spawnEnemyWall = function (x, y, side) {
     sprite.body.allowGravity = false;
 };
 
-PlayState._spawnCharacters = function (data) {
+Crowdjump.Game._spawnCharacters = function (data) {
 
 
     if (CONST_ENEMIES) {
@@ -351,7 +326,7 @@ PlayState._spawnCharacters = function (data) {
     this.game.add.existing(this.hero);
 };
 
-PlayState._spawnCoin = function (coin) {
+Crowdjump.Game._spawnCoin = function (coin) {
     let sprite = this.coins.create(coin.x, coin.y, 'coin');
     sprite.anchor.set(0.5, 0.5);
 
@@ -362,13 +337,13 @@ PlayState._spawnCoin = function (coin) {
     sprite.animations.play('rotate');
 };
 
-PlayState._onHeroVsCoin = function (hero, coin) {
+Crowdjump.Game._onHeroVsCoin = function (hero, coin) {
     this.sfx.coin.play();
     coin.kill();
     this.coinPickupCount++;
 };
 
-PlayState._onHeroVsEnemy = function (hero, enemy) {
+Crowdjump.Game._onHeroVsEnemy = function (hero, enemy) {
     if (hero.body.velocity.y > 0) { // kill enemies when hero is falling
         hero.bounce();
         enemy.die();
@@ -380,21 +355,22 @@ PlayState._onHeroVsEnemy = function (hero, enemy) {
     }
 };
 
-PlayState._onHeroVsFlag = function (hero, flag) {
+Crowdjump.Game._onHeroVsFlag = function (hero, flag) {
     this.sfx.flag.play();
-    this.game.state.restart(true, false, { level: this.level + 1 });
-    // TODO: Winscreen
+    if (this.level < CONST_LEVEL -1){
+        console.log(this.level);
+       this.game.state.restart(true, false, { level: this.level + 1 });
+    }else{
+      this.state.start('Endscreen');
+    }
 
 };
 
-PlayState._createHud = function () {
+Crowdjump.Game._createHud = function () {
     const NUMBERS_STR = '0123456789X ';
-    this.timeFont = this.game.add.retroFont('font:numbers', 20, 26,
-        NUMBERS_STR, 6);
 
     this.coinFont = this.game.add.retroFont('font:numbers', 20, 26,
         NUMBERS_STR, 6);
-
 
     let coinIcon = this.game.make.image(0, 0, 'icon:coin');
     let coinScoreImg = this.game.make.image(coinIcon.x + coinIcon.width,
@@ -402,39 +378,65 @@ PlayState._createHud = function () {
     coinScoreImg.anchor.set(0, 0.5);
 
     this.hud = this.game.add.group();
-    var space = 0;
     if (CONST_COINS){
         this.hud.add(coinIcon);
         this.hud.add(coinScoreImg);
-        space += coinIcon.x + coinIcon.width + 65;
-    }
-
-    if (CONST_TIME){
-        let timeImg = this.game.make.image(space,
-        coinIcon.height / 2, this.timeFont);
-        timeImg.anchor.set(0, 0.5);
-
-        this.hud.add(timeImg);
-
     }
 
     this.hud.position.set(10, 10);
 };
 
-PlayState._spawnFlag = function (x, y) {
+
+Crowdjump.Game._createTimerHud = function(){
+    const NUMBERS_STR = '0123456789X ';
+
+    this.timeFont = this.game.add.retroFont('font:numbers', 20, 26,
+        NUMBERS_STR, 6);
+
+    this.timehud = this.game.add.group();
+    if (CONST_TIME){
+        let timeImg = this.game.make.image(20,20, this.timeFont);
+        timeImg.anchor.set(0.5, 0);
+
+        this.timehud.add(timeImg);
+        this.timehud.position.set(game.world.centerX,5);
+
+    }
+};
+
+Crowdjump.Game.updateTimer = function(){
+
+    var new_elapsed = this.game.time.totalElapsedSeconds();
+    game.timeElapsed = Math.floor(new_elapsed);
+
+};
+
+Crowdjump.Game._spawnFlag = function (x, y) {
     this.flag = this.bgDecoration.create(x, y, 'flag');
     this.flag.anchor.setTo(0.5, 1);
     this.game.physics.enable(this.flag);
     this.flag.body.allowGravity = false;
+    this.flag.body.allowGravity = false;
 };
 
+Crowdjump.Game.paused = function(){
+    if(CONST_PAUSE){
+        this.pausedIndicator.exists = true;
+        this.world.alpha = 0.5;
+        //roundTimer.pause();
+    }
+};
 
-// =============================================================================
-// entry point
-// =============================================================================
+Crowdjump.Game.resumed = function(){
+    if(CONST_PAUSE){
+        this.pausedIndicator.exists = false;
+        this.world.alpha = 1;
+        //roundTimer.resume();
+    }
 
-window.onload = function () {
-    var game = new Phaser.Game(960, 600, Phaser.AUTO, 'crowdjump');
-    game.state.add('play', PlayState);
-    game.state.start('play', true, false, {level: 0});
+};
+
+Crowdjump.Game.restart = function() {
+    this.state.restart();
+    this.game.time.reset();
 };
