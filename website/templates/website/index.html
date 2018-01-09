@@ -5,29 +5,49 @@
 {% load static %}
 
 {% block head %}
-
 {% endblock %}
 
-<link rel="stylesheet" type="text/css" href="{% static 'website/css/style.css' %}" />
-{% block body %}
+{% block jumbo %}
+  <div class="jumbotron jumbotron-fluid">
+    <div class="container">
+        <img class="img-fluid" src="{% static 'website/images/logo.png' %}" alt="Crowdjump">
+        <h1>Welcome to Crowdjump!</h1>
+    </div>
+  </div>
+{% endblock %}
 
 
-<div class="container"  style="max-width: 1000px">
-    <img src="{% static 'website/images/logo.png' %}">
-    <h1> Welcome to CrowdJump!  </h1>
-    <h4> CrowdJump is a bachelor thesis in which you can submit your ideas to improve a simple game to your likings!<br><br>
-         The goal of the thesis is to observe how a game is designed bottom-up with a crowd and how the decision finding<br>
-         process is made. <br><br><br>
+{% block container %}
+
+<h4> Crowdjump is a bachelor thesis in which you can submit yourideas to improve a simple game to your likings!<br><br>
+     The goal of the thesis is to observe how a game is designed bottom-up with a crowd and how the decision finding<br>
+     process is made. <br><br><br>
 
 
-         On <a href="{% url "website:ideas" %}">History</a> you can find the changes implemented in previous iterations of the game. <br><br>
+    The game itself can be found at
+    <div class="btn-group">
+        <a href="{% url "website:phasergame" %}" class="btn btn-info">
+            <i aria-hidden="true"></i> Game
+        </a>
+    </div> <br><br>
 
-         If you played the game and want to submit a new feature, you should visit <a href="{% url "website:ideas" %}">Ideas</a>. <br><br>
+    If you played the game and want to submit a new feature, you should visit
+    <div class="btn-group">
+        <a href="{% url "website:ideas" %}" class="btn btn-info">
+            <i aria-hidden="true"></i> Ideas
+        </a>
+    </div> <br><br>
 
-         The game itself can be found <a href="{% url "website:phasergame" %}">here</a>.
-    </h4>
-    <article>
-    </article>
-</div>
+    On
+    <div class="btn-group">
+        <a href="{% url "website:history" %}" class="btn btn-info">
+            <i aria-hidden="true"></i> History
+        </a>
+    </div>
+    you can find the changes implemented in previous iterations of the game.
+
+</h4>
+<article>
+</article>
 
 {% endblock %}

@@ -8,19 +8,32 @@
 
     {% load static %}
     {% load base_extras %}
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
     <link href="https://fonts.googleapis.com/css?family=Gloria+Hallelujah" rel="stylesheet">
     <link rel="stylesheet" type="text/css" href="{% static 'website/css/style.css' %}" />
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
 
+    {##}
+    {#    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">#}
+    {#    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>#}
+{#        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>#}
+
+     <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/css/bootstrap.min.css">
+
+    <!-- jQuery library -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+
+    <!-- Popper JS -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.6/umd/popper.min.js"></script>
+
+    <!-- Latest compiled JavaScript -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/js/bootstrap.min.js"></script>
     {% block head %}
 
     {% endblock %}
 </head>
 
 
-<nav class="navbar navbar-inverse">
+<nav class="navbar navbar-expand-sm bg-light navbar-light">
     <div class="container-fluid">
 
         <!-- Header -->
@@ -40,22 +53,22 @@
                     <a href="{% url "website:phasergame" %}">
                         <span class="" aria-hidden="true"></span>&nbsp;Game</a>
                 </li>
-                <li class="{% active_page request "history" %}">
-                    <a href="{% url "website:history" %}">
-                        <span class="" aria-hidden="true"></span>&nbsp;History</a>
-                </li>
                 <li class="{% active_page request "ideas" %}">
                     <a href="{% url "website:ideas" %}">
                         <span class="" aria-hidden="true"></span>&nbsp;Ideas</a>
+                </li>
+                <li class="{% active_page request "history" %}">
+                    <a href="{% url "website:history" %}">
+                        <span class="" aria-hidden="true"></span>&nbsp;History</a>
                 </li>
             </ul>
 
 
             <ul class ="nav navbar-nav navbar-right">
-                <li class="">
-                    <a href="{% url 'website:phasergame'%}">
-                        <span class="" aria-hidden="true"></span>&nbsp;Deutsch </a>
-                </li>
+{#                <li class="">#}
+{#                    <a href="{% url 'website:phasergame'%}">#}
+{#                        <span class="" aria-hidden="true"></span>&nbsp;Deutsch </a>#}
+{#                </li>#}
                 {% if user.is_authenticated %}
                     <li class="">
                         <a style="color: red" href="{% url 'index'%}">
@@ -80,22 +93,29 @@
 
 <style>
 
-    article,p,h1,h4 {
-        margin-left: 0px;
-        margin-right: 0px;
-        border-left: 0px solid gray;
-        border-right: 0px solid gray;
-        padding: 1em;
-        overflow: hidden;
-    }
-    table{
-        margin-left: 350px;
-        padding: 1em;
-        overflow: hidden;
-        margin-right: 0px;
-        max-width: 1200px;
-    }
+    {#article,p,h1,h4 {#}
+    {#    margin-left: 0px;#}
+    {#    margin-right: 0px;#}
+    {#    border-left: 0px solid gray;#}
+    {#    border-right: 0px solid gray;#}
+    {#    padding: 1em;#}
+    {#    overflow: hidden;#}
+    {#}#}
 
 </style>
+
+<body>
+{% block jumbo %}
+{% endblock %}
+
+<div class="container">
+
+{% block container %}
+{% endblock %}
+
+</div>
+
 {% block body %}
 {% endblock %}
+
+</body>
