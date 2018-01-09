@@ -10,6 +10,7 @@
     <meta name="viewport" content="minimal-ui">
 
     <script src="{% static "website/js/phaser.js" %}"></script>
+
     <script src="{% static "website/js/startmenu.js" %}"></script>
     <script src="{% static "website/js/game.js" %}"></script>
     <script src="{% static "website/js/endscreen.js" %}"></script>
@@ -25,10 +26,17 @@
     <style>
         canvas {
             {#margin: 0 auto;#}
-            left:0%;margin-left:-0px;
+            left:50%;margin-left:-20px;
         }
     </style>
 
+<div class="container"  style="max-width: 1000px">
+    <h4> The goal is simple: Control the alien by using the arrow keys to move (or space to jump) to get to the flag<br>
+         If you get stuck, you can reset the game pressing R. <br><br>
+
+        Too easy? Submit new ideas!
+    </h4>
+</div>
 
     <div id="game"></div>
 

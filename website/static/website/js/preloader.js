@@ -1,3 +1,5 @@
+var Crowdjump = Crowdjump || {};
+
 Crowdjump.Preloader = function(game){
     this.ready = false;
     var text;
@@ -9,7 +11,8 @@ Crowdjump.Preloader.prototype = {
     create:function () {
     },
     preload: function(){
-        this.preloadBar =  this.add.sprite(50,200,'preloadbar');
+        this.preloadBar =  this.add.sprite(this.world.centerX,this.world.centerY,'preloadbar');
+        this.preloadBar.anchor.set(0.5);
         this.load.setPreloadSprite(this.preloadBar);
 
         var files = '/static/website/gamefiles/';
@@ -20,15 +23,18 @@ Crowdjump.Preloader.prototype = {
 
 
         this.load.image('logo', images + 'logo.png');
+        this.load.image('play', images + 'play.png');
+        this.load.image('bubble', images + 'alienbubble.png');
 
-        for (i = 0; i < LEVEL_COUNT; i++){
-            var levelname = 'level';
-            levelname += i +'';
-
-            this.load.json('level:' + i, level + levelname + '.json');
-        }
-        // this.load.json('level:0', level + 'level0.json');
-        // this.load.json('level:1', level + 'level1.json');
+        //alle Level laden
+        // for (i = 0; i < CONST_LEVEL; i++){
+        //     var levelname = 'level';
+        //     levelname += i +'';
+        //
+        //     this.load.json('level:' + i, level + levelname + '.json');
+        // }
+        this.load.json('level:0', level + 'level0.json');
+        this.load.json('level:1', level + 'level1.json');
 
         //files
         this.load.image('background', files + 'background.png');
@@ -63,9 +69,9 @@ Crowdjump.Preloader.prototype = {
         //fonts
         this.load.image('font:numbers', files + 'numbers.png');
 
-        this.load.audio('myMusic', audio + 'Test.mp3');
-        this.load.audio('myMusic2', audio + 'Test2.mp3');
-        this.load.audio('myMusic3', audio + 'Test3.mp3');
+        // this.load.audio('myMusic', audio + 'Test.mp3');
+        // this.load.audio('myMusic2', audio + 'Test2.mp3');
+        // this.load.audio('myMusic3', audio + 'Test3.mp3');
 
         this.load.onLoadStart.add(this.loadStart,this);
         this.load.onLoadComplete.add(this.loadComplete, this);
@@ -73,7 +79,8 @@ Crowdjump.Preloader.prototype = {
 
     },
     loadStart:function(){
-        text = this.add.text(30,30,'Loading');
+        text = this.add.text(this.world.centerX,this.world.centerY - 30,'Loading. . . ');
+        text.anchor.set(0.5);
     },
     loadComplete:function(){
         this.ready = true;

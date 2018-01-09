@@ -13,10 +13,20 @@
 
 
 <div class="container"  style="max-width: 1000px">
+    <img src="{% static 'website/images/logo.png' %}">
     <h1> Welcome to CrowdJump!  </h1>
-    <h4> <br>What is this?<br> </h4>
+    <h4> CrowdJump is a bachelor thesis in which you can submit your ideas to improve a simple game to your likings!<br><br>
+         The goal of the thesis is to observe how a game is designed bottom-up with a crowd and how the decision finding<br>
+         process is made. <br><br><br>
+
+
+         On <a href="{% url "website:ideas" %}">History</a> you can find the changes implemented in previous iterations of the game. <br><br>
+
+         If you played the game and want to submit a new feature, you should visit <a href="{% url "website:ideas" %}">Ideas</a>. <br><br>
+
+         The game itself can be found <a href="{% url "website:phasergame" %}">here</a>.
+    </h4>
     <article>
-        Crowdjump 
     </article>
 </div>
 

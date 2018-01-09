@@ -27,12 +27,13 @@
         padding-top: 12px;
         padding-bottom: 12px;
         text-align: left;
-        background-color: #2e23cd;
+        background-color:#2e23cd;
         color: white;
     }
 
     table{
-        margin: 20px;
+        margin-left:100px;
+
     }
 </style>
 
@@ -41,9 +42,15 @@
 
 <link rel="stylesheet" type="text/css" href="{% static 'website/css/style.css' %}" />
 
-<h1> Previous Versions and Patchnotes</h1>
+<div class="container"  style="max-width: 1000px">
+    <h1> Previous Versions and Patchnotes  </h1>
+    <h4>
+        Here you can find the features that got implemented, as well as the user who submitted the idea. <br>
+        You want your own special feature? Submit your own on <a href="{% url "website:ideas" %}">Ideas </a><br><br>
+    </h4>
+</div>
 {% if version_list %}
-     <table id="versions">
+     <table id="versions" style="max-width: 1200px">
           <tr>
               <th>Version</th>
               <th>Change</th>

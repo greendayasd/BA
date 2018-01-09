@@ -1,4 +1,4 @@
-var Crowdjump = {};
+var Crowdjump = Crowdjump || {};
 
 Crowdjump.Boot = function(game){
     
@@ -7,8 +7,8 @@ Crowdjump.Boot = function(game){
 Crowdjump.Boot.prototype = {
 
     preload: function () {
-
         var images = '/static/website/images/';
+
         this.load.image('preloadbar', images + 'progressbar.png');
 
     },
@@ -18,7 +18,7 @@ Crowdjump.Boot.prototype = {
         //this.add.sprite(this.world.centerX,this.world.centerY,'logo');
 
         if(this.game.device.desktop){
-            // this.scale.pageAlignHorizontally = true;
+             this.scale.pageAlignHorizontally = true;
         }
         else{
             this.scale.scaleMode =Phaser.ScaleManager.SHOW_ALL;

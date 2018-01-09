@@ -93,6 +93,7 @@ class Idea(models.Model):
     description = models.CharField(max_length=500)
     pub_date = models.DateTimeField('date published', default=datetime.now)
     version = models.ForeignKey(Version, on_delete=models.CASCADE, null=True)
+    estimated_time = models.CharField(max_length=50, null=True, default='')
     #
     # votes = models.IntegerField(default=0)
     #
