@@ -19,22 +19,29 @@ Crowdjump.Endscreen.prototype = {
         if (CONST_BUBBLE){
             bubble = this.add.sprite(this.world.centerX, this.world.centerY, 'bubble');
             bubble.anchor.set(0.5);
+            bubble.inputEnabled = true;
+            bubble.events.onInputDown.add(this.ideas, this);
         }
 
         replay = this.add.text(this.world.centerX,
                                 this.world.centerY, 'Replay?', {fill: '#000000'});
         replay.anchor.set(0.5,-5);
         replay.inputEnabled = true;
-        replay.events.onInputDown.add(this.go, this);
+        replay.events.onInputDown.add(this.replay, this);
 
 
-        this.input.keyboard.addKey(Phaser.KeyCode.R).onUp.add(this.go, this);
+        this.input.keyboard.addKey(Phaser.KeyCode.R).onUp.add(this.replay, this);
 
     },
 
-    go: function(){
+    replay: function(){
         //reset time
         this.game.time.reset();
         this.state.start('Game');
+    },
+
+    ideas: function () {
+        window.location.href = "https://crowdjump.win/website/ideas";
+
     }
 }

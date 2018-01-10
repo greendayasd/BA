@@ -1,45 +1,53 @@
 {% extends "base.html" %}
 
-{% block body %}
-    <style>
-        p {margin-left: 80px;}
-        h1 {margin-left: 80px;}
-        h4 {margin-left: 80px;}
-
-    </style>
+{% block container %}
+{#    <style>#}
+{#        p {margin-left: 80px;}#}
+{#        h1 {margin-left: 80px;}#}
+{#        h4 {margin-left: 80px;}#}
+{##}
+{#    </style>#}
 
 {% if form.errors %}
 <p>Your username and password didn't match. Please try again.</p>
 {% endif %}
 
-{% if next %}
-    {% if user.is_authenticated %}
-    <p>Your account doesn't have access to this page. To proceed,
-    please login with an account that has access.</p>
-    {% else %}
-    <p>Please login to see this page.</p>
-    {% endif %}
+{% if user.is_authenticated %}
+<p>You are already logged in!</p>
+{% else %}
+
+    <div class="container-fluid">
+        <form method="post" action="{% url 'login' %}">
+        {% csrf_token %}
+
+
+         <div class="row">
+             <div class="col-sm-1">user</div>
+             <div class="col-sm-1">{{ form.username }}</div>
+        </div>
+
+        <div class="row">
+{#          <td>{{ form.password.label_tag }}</td>#}
+            <div class="col-sm-1">password</div>
+            <div class="col-sm-1">{{ form.password }}</div>
+        </div>
+        <br>
+        <div>
+          <input type="submit" value="login" />
+          <input type="hidden" name="next" value="{{ next }}" />
+        </div>
+        </form>
+
+
+        <div class="row">
+            <div class="col-sm-2"><a href="{% url 'password_reset' %}">Sign up</a></div>
+            <div class="col-sm-2"><a href="{% url 'password_reset' %}">Lost password?</a></div>
+        </div>
+        {# Assumes you setup the password_reset view in your URLconf #}
+    </div>
+
+
 {% endif %}
 
-<form method="post" action="{% url 'login' %}">
-{% csrf_token %}
-
-<div>
-  <td>{{ form.username.label_tag }}</td>
-  <td>{{ form.username }}</td>
-</div>
-<div>
-  <td>{{ form.password.label_tag }}</td>
-  <td>{{ form.password }}</td>
-</div>
-
-<div>
-  <input type="submit" value="login" />
-  <input type="hidden" name="next" value="{{ next }}" />
-</div>
-</form>
-
-{# Assumes you setup the password_reset view in your URLconf #}
-<p><a href="{% url 'password_reset' %}">Lost password?</a></p>
 
 {% endblock %}

@@ -51,11 +51,13 @@ class PhaserGameView(generic.View):
         return render(request, 'website/phasergame.html')
 
 
+@login_required()
 def idea_new(request):
     form = IdeaForm()
     return render(request, 'website/idea_form.html', {'form' : form})
 
 
+@login_required()
 def idea_new(request):
     if request.method == "POST":
         form = IdeaForm(request.POST)

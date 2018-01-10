@@ -11,10 +11,8 @@
     <link href="https://fonts.googleapis.com/css?family=Gloria+Hallelujah" rel="stylesheet">
     <link rel="stylesheet" type="text/css" href="{% static 'website/css/style.css' %}" />
 
-    {##}
-    {#    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">#}
-    {#    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>#}
-{#        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>#}
+
+    <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
 
      <!-- Latest compiled and minified CSS -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/css/bootstrap.min.css">
@@ -27,61 +25,50 @@
 
     <!-- Latest compiled JavaScript -->
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/js/bootstrap.min.js"></script>
+
     {% block head %}
 
     {% endblock %}
 </head>
 
 
-<nav class="navbar navbar-expand-sm bg-light navbar-light">
+<nav class="navbar navbar-expand-md bg-dark navbar-dark">
     <div class="container-fluid">
 
         <!-- Header -->
-        <div class="navbar-header">
-            <button type="button" class="navbar-toggle" date-toggle="collapse" data-target="#topNavBar">
-                <span class="icon-bar"></span>
-                <span class="icon-bar"></span>
-                <span class="icon-bar"></span>
-            </button>
-            <a class="navbar-Brand" href="{% url 'website:index'%}">Home</a>
-        </div>
+      <a class="navbar-brand" href="{% url 'website:index'%}">Home</a></a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsibleNavbar">
+        <span class="navbar-toggler-icon"></span>
+      </button>
 
         <!-- Items -->
-        <div class="collapse navbar-collapse" id="topNavBar">
-            <ul class ="nav navbar-nav">
-                <li class="{% active_page request "phasergame" %}">
-                    <a href="{% url "website:phasergame" %}">
-                        <span class="" aria-hidden="true"></span>&nbsp;Game</a>
+        <div class="collapse navbar-collapse" id="collapsibleNavbar">
+            <ul class="navbar-nav mr-auto">
+                <li class="nav-item">
+                    <a class="nav-link" href="{% url "website:phasergame" %}">Game</a>
                 </li>
-                <li class="{% active_page request "ideas" %}">
-                    <a href="{% url "website:ideas" %}">
-                        <span class="" aria-hidden="true"></span>&nbsp;Ideas</a>
+                <li class="nav-item">
+                    <a class="nav-link" href="{% url "website:ideas" %}">Ideas</a>
                 </li>
-                <li class="{% active_page request "history" %}">
-                    <a href="{% url "website:history" %}">
-                        <span class="" aria-hidden="true"></span>&nbsp;History</a>
+                <li class="nav-item">
+                    <a class="nav-link" href="{% url "website:history" %}">History</a>
                 </li>
             </ul>
 
 
-            <ul class ="nav navbar-nav navbar-right">
-{#                <li class="">#}
-{#                    <a href="{% url 'website:phasergame'%}">#}
-{#                        <span class="" aria-hidden="true"></span>&nbsp;Deutsch </a>#}
-{#                </li>#}
+            <ul class="navbar-nav ml-auto">
                 {% if user.is_authenticated %}
-                    <li class="">
-                        <a style="color: red" href="{% url 'index'%}">
-                        <span class="" aria-hidden="true"></span>&nbsp; {{ user.get_username }} </a>
+                    <li class="nav-item">
+                        <a class="nav-link" style="color: red" href="{% url 'index'%}">{{ user.get_username }} </a>
                     </li>
-                    <li class="">
-                        <a href="{% url 'logout'%}?next={{request.path}}">
-                        <span class="glyphicon glyphicon-log-out" aria-hidden="true"></span>&nbsp; Logout </a>
+                    <li class="nav-item">
+                        <a class="nav-link" href="{% url 'logout'%}?next={{request.path}}">
+                        <span class="fa fa-sign-out" aria-hidden="true"></span>&nbsp; Logout </a>
                     </li>
                 {% else %}
                     <li class="">
-                        <a href="{% url 'login'%}?next={{request.path}}">
-                        <span class="glyphicon glyphicon-log-in" aria-hidden="true"></span>&nbsp; Login </a>
+                        <a class="nav-link" href="{% url 'login'%}?next={{request.path}}">
+                        <span class="gfa fa-sign-in" aria-hidden="true"></span>&nbsp; Login </a>
 
                     </li>
                 {% endif %}
@@ -89,7 +76,7 @@
         </div>
 
     </div>
-</nav>
+</nav><br>
 
 <style>
 

@@ -24,7 +24,7 @@ Crowdjump.Preloader.prototype = {
 
         this.load.image('logo', images + 'logo.png');
         this.load.image('play', images + 'play.png');
-        this.load.image('bubble', images + 'alienbubble.png');
+        this.load.image('bubble', images + 'ideabubble.png');
 
         //alle Level laden
         // for (i = 0; i < CONST_LEVEL; i++){

@@ -3,6 +3,7 @@ var Crowdjump = Crowdjump || {};
 Crowdjump.Menu = function(game){
     var startGame;
     var logo;
+    var instruction;
 };
 
 Crowdjump.Menu.prototype = {
@@ -20,6 +21,13 @@ Crowdjump.Menu.prototype = {
         startGame.inputEnabled = true;
         startGame.events.onInputDown.add(this.phasergame,this)
 
+        var instructionText = "The goal is simple: Control the alien by using the arrow keys to move \n" +
+            "(or space to jump) to get to the flag.\n" +
+            "If you get stuck, you can reset the game pressing R.";
+
+        instruction = this.add.text(this.world.centerX,
+                                this.world.centerY + 160, instructionText, {fill: '#ffffff'});
+        instruction.anchor.set(0.5);
     },
 
     phasergame: function () {

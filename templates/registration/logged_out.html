@@ -1,12 +1,7 @@
 {% extends "base.html" %}
 
-{% block body %}
-    <style>
-        p {margin-left: 80px;}
-        h1 {margin-left: 80px;}
-        h4 {margin-left: 80px;}
+{% block container %}
 
-    </style>
 <p>Logged out!</p>  
 
 <a style="margin-left: 80px" href="{% url 'login'%}">Click here to login again.</a>
