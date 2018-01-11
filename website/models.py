@@ -38,16 +38,17 @@ class Player(models.Model):
     rounds_played = models.IntegerField(default=0)
     current_version_beaten = models.BooleanField(default=False)
     votes_left = models.IntegerField(default=1)
-
+    email_confirmed = models.BooleanField(default=False)
 
     @receiver(post_save, sender=User)
     def create_player(sender, instance, created, **kwargs):
         if created:
             Player.objects.create(user=instance)
-
-    @receiver(post_save, sender=User)
-    def save_player(sender, instance, **kwargs):
         instance.player.save()
+
+    # @receiver(post_save, sender=User)
+    # def save_player(sender, instance, **kwargs):
+    #     instance.player.save()
 
     def player_increase_rounds(self):
         self.rounds_played +=1
@@ -76,7 +77,7 @@ class Version(models.Model):
     label = models.CharField(max_length=20,unique=True)
     change = models.CharField(max_length=200)
     pub_date = models.DateTimeField('date published', default=datetime.now)
-    submitter = models.ForeignKey(Player, on_delete=models.CASCADE, null=True)
+    submitter = models.ForeignKey(Player, on_delete=models.DO_NOTHING, null=True)
 
     def __str__(self):
         return self.label

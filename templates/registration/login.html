@@ -9,7 +9,12 @@
 {#    </style>#}
 
 {% if form.errors %}
-<p>Your username and password didn't match. Please try again.</p>
+
+{% if not user.active and user.username != ''%}
+    <p>Please click the link in your activation email</p>
+{% else %}
+    <p>Your username and password didn't match. Please try again.</p>
+{% endif %}
 {% endif %}
 
 {% if user.is_authenticated %}
@@ -33,14 +38,14 @@
         </div>
         <br>
         <div>
-          <input type="submit" value="login" />
+          <button class="btn btn-info" type="submit" value="login" >login</button>
           <input type="hidden" name="next" value="{{ next }}" />
         </div>
         </form>
 
 
         <div class="row">
-            <div class="col-sm-2"><a href="{% url 'password_reset' %}">Sign up</a></div>
+            <div class="col-sm-2"><a href="{% url 'website:signup' %}">Sign up</a></div>
             <div class="col-sm-2"><a href="{% url 'password_reset' %}">Lost password?</a></div>
         </div>
         {# Assumes you setup the password_reset view in your URLconf #}

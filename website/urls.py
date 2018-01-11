@@ -1,4 +1,4 @@
-from django.urls import path, include
+from django.urls import path
 from django.conf.urls import url
 from . import views
 
@@ -13,4 +13,8 @@ urlpatterns = [
     url(r'^idea/(?P<pk>\d+)/$', views.idea_detail, name='idea_detail'),
     path('game', views.GameView.as_view(), name='game'),
     path('phasergame', views.PhaserGameView.as_view(), name='phasergame'),
+    url(r'^signup/$', views.signup, name='signup'),
+    url(r'^account_activation_sent/$', views.account_activation_sent, name='account_activation_sent'),
+    url(r'^activate/(?P<uidb64>[0-9A-Za-z_\-]+)/(?P<token>.+)/$',
+        views.activate, name='activate'),
 ]
