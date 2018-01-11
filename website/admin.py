@@ -1,6 +1,11 @@
 from django.contrib import admin
 
 from .models import Question, Idea, Choice, Version, Player
+from django.contrib.auth.models import User
+from django.core.mail import send_mail
+from django.contrib.admin.helpers import ActionForm
+from django import forms
+
 # Register your models here.
 
 
@@ -33,7 +38,38 @@ class IdeaAdmin(admin.ModelAdmin):
     search_fields = ['request_text', 'version']
 
 
+def admin_mail(modeladmin, request, queryset):
+    version = Version.objects.all().order_by('-id')[0]
+    subject = request.POST['subject']
+    if subject == '' or subject == 'a':
+        subject = 'New Crowdjump version is online!'
+
+    message = request.POST['message']
+    if message == '' or message == 'a':
+        message = 'Version ' + version.label + ' of Crowdjump is available now! \n ' \
+                                         'Test it at https://crowdjump.win/website/phasergame'
+
+    receivers = []
+    for obj in queryset:
+        receivers.append(obj.user.email)
+    # for user in User.objects.all():
+    #     receivers.append(user.email)
+
+    send_mail(subject, message, 'crowdjump@gmail.com', receivers)
+
+
+class MailForm(ActionForm):
+
+    subject = forms.CharField(max_length=100)
+    message = forms.CharField(max_length=100)
+
+
+class MailAdmin(admin.ModelAdmin):
+    action_form = MailForm
+    actions = [admin_mail]
+
+
 admin.site.register(Question, QuestionAdmin)
 admin.site.register(Version)
-admin.site.register(Player)
+admin.site.register(Player,MailAdmin)
 admin.site.register(Idea, IdeaAdmin)

@@ -33,3 +33,5 @@ class IdeaForm(forms.ModelForm):
     class Meta:
         model = Idea
         fields = ('request_text', 'description',)
+
+

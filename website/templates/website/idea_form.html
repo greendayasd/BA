@@ -3,16 +3,28 @@
 {% load static %}
 
 {% block title %}Submit Idea{% endblock %}
-<link rel="stylesheet" type="text/css" href="{% static 'website/css/style.css' %}" />
 
-{% block body %}
+{% block container %}
 <form method="post" novalidate>
   {% csrf_token %}
-  <table border="1">
-      {{ form }}
-     <!-- <input type="hidden" name="user" value="{{ user}}"> -->
+  <table class="table" border="1">
+      <thead>
+        <div class="container">
+            <h1>Submit your idea here!</h1> <br>
+
+        </div>
+      </thead>
+      <tbody>
+      <tr>
+          {{ form }}
+         <!-- <input type="hidden" name="user" value="{{ user}}"> -->
+      </tr>
+      </tbody>
   </table>
-  <button type="submit">Submit</button>
+    <div class="container">
+        <button class="btn btn-info" type="submit">Submit</button>
+
+    </div>
 </form>
    <!-- 'You already submitted a request! Do you want to delete it?' -->
 

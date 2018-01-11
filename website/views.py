@@ -9,8 +9,8 @@ from django.template.loader import render_to_string
 from django.utils.encoding import force_bytes, force_text
 from django.contrib.sites.shortcuts import get_current_site
 from django.contrib.auth import login, authenticate
-from django.contrib.auth.models import User
 from django.template import RequestContext
+from django.contrib.auth.models import User
 
 
 class IndexView(generic.View):
@@ -19,8 +19,11 @@ class IndexView(generic.View):
     def get(self, request, *args, **kwargs):
         num_visits = request.session.get('num_visits', 0)
         request.session['num_visits'] = num_visits+1
+        version = Version.objects.all().order_by('-id')[0]
+        versionLabel = version.label
+
         return render(request, 'website/index.html', context={
-            'num_visits':num_visits}, # num_visits appended
+            'num_visits':num_visits, 'version':versionLabel}, # num_visits appended
 
     )
 
@@ -138,3 +141,4 @@ def activate(request, uidb64, token):
         return redirect('website:index')
     else:
         return render(request, 'website/account_activation_invalid.html')
+
