@@ -40,6 +40,9 @@
                     There is not much on the website. If you have ideas to alter the website, submit them!
                 </li>
             </ul>
+            {% if vote %}
+                <h1><br>{{ vote }}</h1>
+            {% endif %}
         </div>
     </h4> <br> <br>
     <div class="alert alert-info">
@@ -55,7 +58,6 @@
 </div>
 
 
-{#    <p> {{ vote }}</p>#}
 {% if idea_list %}
 
 <div class="container">
@@ -84,6 +86,6 @@
 </div>
 
 {% else %}
-    <p>No history available.</p>
+{#    <p>No ideas available.</p>#}
 {% endif %}
 {% endblock %}

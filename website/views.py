@@ -72,9 +72,10 @@ def idea_new(request):
         player = Player.objects.all().filter(user=request.user)[0]
         requests_left = player.requests_left
         if requests_left < 1:
-            return render(request, 'website/ideas.html', {'vote': 'You already submited a request!'})
-
-        if form.is_valid():
+            #return redirect('/website/ideas', {'vote': 'You already submited a request!'})
+            return render(request, 'website/ideas.html', {'vote': 'You already '
+                                                                      'submited a request this cycle!'})
+        elif form.is_valid():
             post = form.save(commit=False)
             post.user = request.user
             ver = Version.objects.all().order_by('-id')[0]
@@ -83,7 +84,7 @@ def idea_new(request):
             player.requests_left -= 1
             player.save()
 
-            return redirect('/website/ideas', pk=post.pk)
+            return redirect('ideas', pk=post.pk)
     else:
         form = IdeaForm()
     return render(request, 'website/idea_form.html', {'form': form})
