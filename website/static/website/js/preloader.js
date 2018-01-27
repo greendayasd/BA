@@ -91,7 +91,8 @@ Crowdjump.Preloader.prototype = {
             this.ready = false;
             text.setText('');
             // console.log('fertig geladen');
-            this.state.start('Startmenu');
+            // this.state.start('Startmenu');
+            this.state.start('Game');
         }
     }
 

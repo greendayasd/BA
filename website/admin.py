@@ -58,6 +58,12 @@ def admin_mail(modeladmin, request, queryset):
     send_mail(subject, message, 'crowdjump@gmail.com', receivers)
 
 
+def reset_votes(modeladmin, request, queryset):
+    for obj in queryset:
+        obj.requests_left = 1
+        obj.save
+
+
 class MailForm(ActionForm):
 
     subject = forms.CharField(max_length=100)
@@ -66,10 +72,15 @@ class MailForm(ActionForm):
 
 class MailAdmin(admin.ModelAdmin):
     action_form = MailForm
-    actions = [admin_mail]
+    actions = [admin_mail, reset_votes]
+
+#
+# class ResetVotes(admin.ModelAdmin):
+#     actions = [reset_votes]
 
 
 admin.site.register(Question, QuestionAdmin)
 admin.site.register(Version)
 admin.site.register(Player,MailAdmin)
+# admin.site.register(Player,ResetVotes)
 admin.site.register(Idea, IdeaAdmin)

@@ -1,13 +1,5 @@
 // Global Variables
 
-var game = new Phaser.Game(960, 600, Phaser.AUTO);
-
-game.global = {
-    coinPickupCount : 0,
-    timeElapsed : 0
-
-}
-
     const CONST_DOUBLE_JUMP = false;
     const CONST_COINS = false;
     const CONST_ENEMIES = false;
@@ -17,6 +9,26 @@ game.global = {
     const CONST_PAUSE = false;
     const CONST_LEVEL = 1;
 
+    var game;
+
+window.createGame = function (canvas, scope) {
+    scope.$on('$destroy', function () {
+        game.destroy(); // Clean up the game when we leave this scope
+    });
+
+    scope.$on('game:toggleMusic', function () {
+        Game.toggleMusic(); // some function that toggles the music
+    });
+
+
+    game = new Phaser.Game(960, 600, Phaser.AUTO, canvas);
+
+    game.global = {
+        coinPickupCount: 0,
+        timeElapsed: 0
+
+    }
+
 
     game.state.add('Boot', Crowdjump.Boot);
     game.state.add('Preloader', Crowdjump.Preloader);
@@ -25,45 +37,5 @@ game.global = {
     game.state.add('Endscreen', Crowdjump.Endscreen);
     game.state.start('Boot');
 
-// var Crowdjump = {};
-//
-//
-// Crowdjump.Main = function(game){
-//     var logo;
-//     var startGame;
-//     game.state.add('Startmenu', Crowdjump.Menu);
-//     game.state.add('Game', Crowdjump.Game);
-//     game.state.add('Endscreen', Crowdjump.Endscreen);
-// };
-//
-//
-// Crowdjump.Main.prototype = {
-//    preload: function(){
-//       var files = '/static/website/gamefiles/';
-//       var level = '/static/website/level/';
-//       var audio = '/static/website/audio/';
-//       var images = '/static/website/images/';
-//
-//       this.load.image('logo', images + 'logo.png');
-//    },
-//    create: function(){
-//         logo = this.add.sprite(this.world.centerX,
-//                                this.world.centerY -80, 'logo');
-//         logo.anchor.set(0.5);
-//         logo.inputEnabled = true;
-//         logo.events.onInputDown.add(this.start, {'points': 1}, this);
-//
-//
-//         startGame = this.add.text(this.world.centerX - 50, this.world.centerY + 30, 'My score is 0', {fill: '#ffffff'});
-//         startGame.inputEnabled = true;
-//         startGame.events.onInputDown.add(this.start, {'points': 1}, this);
-//
-//         this.game.stage.backgroundColor = '#1948cd';
-//     },
-//     start: function(){
-//         startGame.text = 'My score is '+this.points++;
-//    },
-//     update: function(){
-//     }
-// };
-//
+    return
+}

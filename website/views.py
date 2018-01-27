@@ -1,7 +1,7 @@
 from .models import Idea, Version, Player
 from .forms import IdeaForm, SignUpForm
 from .tokens import account_activation_token
-from django.shortcuts import render, redirect
+from django.shortcuts import render, redirect, render_to_response
 from django.views import generic
 from django.contrib.auth.decorators import login_required
 from django.utils.http import urlsafe_base64_encode, urlsafe_base64_decode
@@ -10,9 +10,75 @@ from django.utils.encoding import force_bytes, force_text
 from django.contrib.sites.shortcuts import get_current_site
 from django.contrib.auth import login, authenticate
 from django.template import RequestContext
-from django.contrib.auth.models import User
+from django.contrib.auth.models import User, Group
+from rest_framework import viewsets
+from .serializers import UserSerializer, GroupSerializer, IdeaSerializer, HistorySerializer
+from .permissions import IsOwnerOrReadOnly
 
 
+class UserViewSet(viewsets.ModelViewSet):
+    """
+    API endpoint that allows users to be viewed or edited.
+    """
+    queryset = User.objects.all() #.order_by('-date_joined')
+    serializer_class = UserSerializer
+
+
+class GroupViewSet(viewsets.ModelViewSet):
+    """
+    API endpoint that allows groups to be viewed or edited.
+    """
+    queryset = Group.objects.all()
+    serializer_class = GroupSerializer
+
+
+class IdeaViewSet(viewsets.ModelViewSet):
+    # ver = Version.objects.all().order_by('-pub_date')[0]
+    # queryset = Idea.objects.all().filter(version=ver).order_by('-pub_date')
+    queryset = Idea.objects.all()
+    lookup_field = 'id'
+    serializer_class = IdeaSerializer
+    permission_classes = (IsOwnerOrReadOnly,)
+
+    def pre_save(self, obj):
+        obj.owner = self.request.user
+
+
+class OwnIdeasViewSet(viewsets.ModelViewSet):
+    serializer_class = IdeaSerializer
+
+    def get_queryset(self):
+        return Idea.objects.filter(self.request.user)
+
+
+class IdeasViewSet(viewsets.ModelViewSet):
+    serializer_class = IdeaSerializer
+
+    def get_queryset(self):
+        ver = Version.objects.all().order_by('-id')[0]
+        return Idea.objects.filter(version=ver)
+
+
+class HistoryViewSet(viewsets.ModelViewSet):
+    serializer_class = HistorySerializer
+
+    def get_queryset(self):
+        return Version.objects.all()
+
+
+def homepage(request):
+    return render(request, 'website/home.html')
+
+# class IndexTestView(generic.View):
+#     template_name = 'website/indextest.html'
+#
+#     def get(self, request, *args, **kwargs):
+#         return render(request, 'website/home.html')
+
+
+
+
+# old views
 class IndexView(generic.View):
     template_name = 'website/index.html'
 
@@ -42,7 +108,8 @@ class IdeasView(generic.ListView):
     context_object_name = 'idea_list'
 
     def get_queryset(self):
-        return Idea.objects.order_by('-pub_date')
+        ver = Version.objects.all().order_by('-pub_date')[0]
+        return Idea.objects.filter(version=ver).order_by('-pub_date')
 
 
 class GameView(generic.View):

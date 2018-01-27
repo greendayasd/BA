@@ -17,13 +17,22 @@ from django.contrib import admin
 from django.urls import path, include
 from django.conf.urls import url
 from website import views
+from rest_framework import routers
+
+router = routers.DefaultRouter()
+app_name = 'website'
 
 urlpatterns = [
-    path('', views.IndexView.as_view(), name='index'),
+    url(r'^$', views.homepage, name='index'),
     path('website/', include('website.urls')),
     path('admin/', admin.site.urls),
 
 ]
 urlpatterns += [
     url(r'^accounts/', include('django.contrib.auth.urls')),
+
+    url(r'^signup/$', views.signup, name='signup'),
+    url(r'^account_activation_sent/$', views.account_activation_sent, name='account_activation_sent'),
+    url(r'^activate/(?P<uidb64>[0-9A-Za-z_\-]+)/(?P<token>.+)/$',
+        views.activate, name='activate'),
 ]

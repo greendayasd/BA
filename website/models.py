@@ -4,6 +4,8 @@ from django.utils import timezone
 from django.contrib.auth.models import User
 from django.db.models.signals import post_save
 from django.dispatch import receiver
+from pygments.lexers import get_all_lexers
+from pygments.styles import get_all_styles
 
 
 class Question(models.Model):
@@ -33,10 +35,7 @@ class Choice(models.Model):
 
 class Player(models.Model):
     user = models.OneToOneField(User, on_delete=models.CASCADE, primary_key=True)
-    highscore = models.IntegerField(default=-1)
     requests_left = models.IntegerField(default=1)
-    rounds_played = models.IntegerField(default=0)
-    current_version_beaten = models.BooleanField(default=False)
     votes_left = models.IntegerField(default=1)
     email_confirmed = models.BooleanField(default=False)
 
@@ -45,20 +44,6 @@ class Player(models.Model):
         if created:
             Player.objects.create(user=instance)
         instance.player.save()
-
-    # @receiver(post_save, sender=User)
-    # def save_player(sender, instance, **kwargs):
-    #     instance.player.save()
-
-    def player_increase_rounds(self):
-        self.rounds_played +=1
-
-    def player_set_highscore(self, new_highscore):
-        if new_highscore < self.highscore:
-            self.highscore = new_highscore
-
-    def player_increase_time_played(self, playtime):
-        self.time_played += playtime
 
     def player_set_requests(self, new_requests):
         self.requests_left = new_requests
@@ -71,6 +56,11 @@ class Player(models.Model):
 
     def __str__(self):
         return self.user.username
+
+    def current_version_beaten (self):
+        ver = Version.objects.all().order_by('-id')[0]
+        current = GameInfo.objects.all().filter(version=ver,user=self.user)
+        return current.rounds_won >= 1
 
 
 class Version(models.Model):
@@ -90,11 +80,14 @@ class Version(models.Model):
 
 class Idea(models.Model):
     user = models.ForeignKey(User, on_delete=models.CASCADE)
+    version = models.ForeignKey(Version, on_delete=models.CASCADE, null=True)
     request_text = models.CharField(max_length=40)
     description = models.CharField(max_length=500)
     pub_date = models.DateTimeField('date published', default=datetime.now)
-    version = models.ForeignKey(Version, on_delete=models.CASCADE, null=True)
     estimated_time = models.CharField(max_length=50, null=True, default='')
+    upvotes = models.IntegerField(default=0)
+    downvotes = models.IntegerField(default=0)
+
     #
     # votes = models.IntegerField(default=0)
     #
@@ -107,6 +100,29 @@ class Idea(models.Model):
         return now - datetime.timedelta(days=1) <= self.pub_date <= now
 
     def is_newest_version(self):
-        return self.version == self.version
+        ver = Version.objects.all().order_by('-id')[0]
+        return self.version == ver
 
+
+class GameInfo(models.Model):
+    user = models.ForeignKey(User, on_delete=models.CASCADE)
+    version = models.ForeignKey(Version, on_delete=models.CASCADE, null=True)
+    rounds_won = models.IntegerField(default=0)
+    rounds_lost = models.IntegerField(default=0)
+    enemies_killed = models.IntegerField(default=0)
+    coins_collected = models.IntegerField(default=0)
+    highscore = models.IntegerField(default=-1)
+
+    def __str__(self):
+        return self.version.label + '  ' + self.user.username + '  ' + self.rounds_won + ...
+        '/' + (self.rounds_won + self.rounds_lost)
+
+
+class WebsiteInfo(models.Model):
+    user = models.ForeignKey(User, on_delete=models.CASCADE)
+    time_spent_game = models.IntegerField(default=0)
+    time_spent_ideas = models.IntegerField(default=0)
+    time_spent_index = models.IntegerField(default=0)
+    time_spent_history = models.IntegerField(default=0)
+    time_spent_chat = models.IntegerField(default=0)
 

@@ -1,4 +1,5 @@
 
+<html ng-app="Crowdjump">
 
 <head>
     <meta charset="utf-8">
@@ -26,9 +27,14 @@
     <!-- Latest compiled JavaScript -->
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/js/bootstrap.min.js"></script>
 
+    <!-- Angular JS -->
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.4/angular.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.4/angular-route.js"></script>
     {% block head %}
 
     {% endblock %}
+
+    <base href="/">
 </head>
 
 
@@ -45,13 +51,16 @@
         <div class="collapse navbar-collapse" id="collapsibleNavbar">
             <ul class="navbar-nav mr-auto">
                 <li class="nav-item">
-                    <a class="nav-link" href="{% url "website:phasergame" %}">Game</a>
+{#                    <a class="nav-link" href="{% url "website:phasergame" %}">Game</a>#}
+                    <a class="nav-link" ui-sref="game">Game</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="{% url "website:ideas" %}">Ideas</a>
+{#                    <a class="nav-link" href="{% url "website:ideas" %}">Ideas</a>#}
+                    <a class="nav-link" ui-sref="ideas">Ideas</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="{% url "website:history" %}">History</a>
+{#                    <a class="nav-link" href="{% url "website:history" %}">History</a>#}
+                    <a class="nav-link" ui-ref="history">History</a>
                 </li>
             </ul>
 
@@ -78,20 +87,9 @@
     </div>
 </nav><br>
 
-<style>
 
-    {#article,p,h1,h4 {#}
-    {#    margin-left: 0px;#}
-    {#    margin-right: 0px;#}
-    {#    border-left: 0px solid gray;#}
-    {#    border-right: 0px solid gray;#}
-    {#    padding: 1em;#}
-    {#    overflow: hidden;#}
-    {#}#}
+<body ng-app="Crowdjump">
 
-</style>
-
-<body>
 {% block jumbo %}
 {% endblock %}
 
@@ -105,4 +103,7 @@
 {% block body %}
 {% endblock %}
 
+<script type="text/javascript" src="{% static 'website/js/myangular.js' %}"></script>
 </body>
+
+</html>
