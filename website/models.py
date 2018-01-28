@@ -6,6 +6,7 @@ from django.db.models.signals import post_save
 from django.dispatch import receiver
 from pygments.lexers import get_all_lexers
 from pygments.styles import get_all_styles
+from django.contrib.auth.models import AbstractUser
 
 
 class Question(models.Model):
@@ -79,8 +80,8 @@ class Version(models.Model):
 
 
 class Idea(models.Model):
-    user = models.ForeignKey(User, on_delete=models.CASCADE)
-    version = models.ForeignKey(Version, on_delete=models.CASCADE, null=True)
+    user = models.ForeignKey(User, on_delete=models.CASCADE, related_name='ideas')
+    version = models.ForeignKey(Version, on_delete=models.CASCADE, null=True, related_name='ideas')
     request_text = models.CharField(max_length=40)
     description = models.CharField(max_length=500)
     pub_date = models.DateTimeField('date published', default=datetime.now)
@@ -105,8 +106,8 @@ class Idea(models.Model):
 
 
 class GameInfo(models.Model):
-    user = models.ForeignKey(User, on_delete=models.CASCADE)
-    version = models.ForeignKey(Version, on_delete=models.CASCADE, null=True)
+    user = models.ForeignKey(User, on_delete=models.CASCADE, related_name='gameinfo')
+    version = models.ForeignKey(Version, on_delete=models.CASCADE, null=True, related_name='gameinfo')
     rounds_won = models.IntegerField(default=0)
     rounds_lost = models.IntegerField(default=0)
     enemies_killed = models.IntegerField(default=0)
@@ -119,7 +120,8 @@ class GameInfo(models.Model):
 
 
 class WebsiteInfo(models.Model):
-    user = models.ForeignKey(User, on_delete=models.CASCADE)
+    user = models.ForeignKey(User, on_delete=models.CASCADE, related_name='websiteinfo')
+    version = models.ForeignKey(Version, on_delete=models.CASCADE, null=True, related_name='websiteinfo')
     time_spent_game = models.IntegerField(default=0)
     time_spent_ideas = models.IntegerField(default=0)
     time_spent_index = models.IntegerField(default=0)
